@@ -1,423 +1,450 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Laila Azizi | Data Research Analyst</title>
-  <meta name="description" content="Laila Azizi — Data Research Analyst. Data quality, systems validation, policy/ops analytics. Projects, experience, skills, and contact."/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laila Azizi — Data Research Analyst</title>
+  <meta name="description" content="Portfolio of Laila Azizi — Data Research Analyst (Ops/Policy/QA) in Fremont, CA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg0:#070A12;
       --bg1:#0B1020;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --stroke: rgba(255,255,255,.14);
-      --text:#EAF0FF;
-      --muted: rgba(234,240,255,.72);
-      --muted2: rgba(234,240,255,.55);
-      --brand:#7C5CFF;
-      --brand2:#2DE2E6;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 22px;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.08);
+      --stroke: rgba(255,255,255,0.12);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --muted2: rgba(255,255,255,0.55);
+      --accent:#8B5CF6;
+      --accent2:#22D3EE;
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius: 18px;
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1200px 700px at 12% 12%, rgba(124,92,255,.22), transparent 60%),
-        radial-gradient(900px 600px at 85% 18%, rgba(45,226,230,.16), transparent 55%),
-        radial-gradient(900px 700px at 50% 95%, rgba(124,92,255,.12), transparent 60%),
+        radial-gradient(1200px 800px at 10% 10%, rgba(139,92,246,0.18), transparent 55%),
+        radial-gradient(1000px 700px at 80% 20%, rgba(34,211,238,0.12), transparent 55%),
+        radial-gradient(900px 700px at 60% 90%, rgba(139,92,246,0.10), transparent 60%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
-      min-height:100vh;
       overflow-x:hidden;
     }
-
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 70px}
-    a{color:inherit;text-decoration:none}
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 80px}
 
     .topbar{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7,10,18,.72), rgba(7,10,18,.38));
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .topbar-inner{
-      max-width:1100px;margin:0 auto;
-      padding:14px 18px;
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      position:sticky; top:10px; z-index:10;
+      display:flex; justify-content:space-between; align-items:center;
+      gap:14px;
+      padding:10px 12px;
+      background: rgba(10,14,26,0.55);
+      border:1px solid var(--stroke);
+      border-radius:999px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
     }
     .brand{
-      display:flex;align-items:center;gap:10px;
-      font-weight:650;letter-spacing:.2px;
+      display:flex; align-items:center; gap:10px;
+      padding:6px 10px;
+      border-radius:999px;
     }
     .dot{
-      width:10px;height:10px;border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.2)), linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: 0 0 18px rgba(124,92,255,.55);
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow: 0 0 18px rgba(139,92,246,0.6);
     }
-    nav{
-      display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;
+    .brand b{font-weight:700; letter-spacing:0.2px}
+    .nav{
+      display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;
     }
-    .navbtn{
-      padding:9px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color: rgba(234,240,255,.85);
+    .pill{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      color:var(--muted);
+      font-weight:600;
       font-size:13px;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
       cursor:pointer;
+      user-select:none;
     }
-    .navbtn:hover{
+    .pill:hover{
       transform: translateY(-1px);
-      border-color: rgba(124,92,255,.45);
-      background: rgba(124,92,255,.10);
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.16);
+      color:var(--text);
+    }
+    .pill.active{
+      background: linear-gradient(135deg, rgba(139,92,246,0.22), rgba(34,211,238,0.14));
+      border-color: rgba(139,92,246,0.35);
+      color:var(--text);
     }
 
-    .hero{
-      display:grid;grid-template-columns: 1.25fr .85fr;
-      gap:18px;margin-top:18px;
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.45fr 0.9fr;
+      gap:18px;
     }
     @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-      nav{display:none}
+      .grid{grid-template-columns:1fr}
+      .topbar{top:8px}
     }
 
     .card{
+      background: var(--card);
+      border:1px solid var(--stroke);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      border:1px solid rgba(255,255,255,.10);
       box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
       position:relative;
       overflow:hidden;
-      transform: translateZ(0);
     }
     .card::before{
       content:"";
-      position:absolute;inset:-2px;
-      background: radial-gradient(800px 200px at 20% 10%, rgba(124,92,255,.18), transparent 65%),
-                  radial-gradient(600px 180px at 90% 25%, rgba(45,226,230,.12), transparent 60%);
-      opacity:1;
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 280px at 15% 15%, rgba(139,92,246,0.22), transparent 55%),
+                  radial-gradient(500px 260px at 80% 10%, rgba(34,211,238,0.16), transparent 55%);
+      opacity:0.7;
       pointer-events:none;
     }
     .card > *{position:relative}
+    .pad{padding:20px}
 
-    .hero-left{padding:26px 26px 22px}
-    .kickers{
-      display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;
-    }
-    .pill{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      color: rgba(234,240,255,.78);
-    }
-    h1{
-      margin:10px 0 10px;
-      font-size:44px;line-height:1.02;
-      letter-spacing:-.8px;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:14.5px;
-      line-height:1.5;
-      max-width:62ch;
-    }
-
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:11px 14px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      color: rgba(234,240,255,.92);
-      font-weight:650;font-size:13px;
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
-      cursor:pointer;
-    }
-    .btn:hover{transform: translateY(-1px);border-color: rgba(124,92,255,.45);background: rgba(124,92,255,.10)}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(45,226,230,.65));
-      border-color: rgba(255,255,255,.16);
-      box-shadow: 0 10px 30px rgba(124,92,255,.30);
-    }
-    .btn.primary:hover{background: linear-gradient(135deg, rgba(124,92,255,1), rgba(45,226,230,.78))}
-
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .chip{
-      font-size:12px;
-      padding:7px 10px;border-radius:999px;
-      background: rgba(0,0,0,.18);
-      border:1px solid rgba(255,255,255,.10);
-      color: rgba(234,240,255,.78);
-    }
-
-    .hero-right{padding:16px}
-    .profile{
-      display:grid;gap:12px;
-    }
-    .pf-top{
-      display:flex;gap:14px;align-items:center;
-      padding:14px;border-radius:18px;
-      background: rgba(0,0,0,.18);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .pf-img{
-      width:84px;height:84px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
-      overflow:hidden;
-      box-shadow: 0 14px 40px rgba(0,0,0,.45);
-      flex:0 0 auto;
-    }
-    .pf-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .pf-name{font-weight:800}
-    .pf-loc{color:var(--muted2);font-size:12.5px;margin-top:2px}
-    .pf-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:10px;
-    }
-    .mini{
-      padding:12px;border-radius:18px;
-      background: rgba(0,0,0,.16);
-      border:1px solid rgba(255,255,255,.10);
-      min-height:76px;
-    }
-    .mini h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:rgba(234,240,255,.62);text-transform:uppercase}
-    .mini p{margin:0;color:rgba(234,240,255,.86);font-size:13px;line-height:1.35}
-
-    .section{
-      margin-top:18px;
-      padding:18px;
-    }
-    .section-title{
-      display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+    .kicker{
+      display:flex; gap:8px; flex-wrap:wrap;
       margin-bottom:12px;
     }
-    .section-title h2{margin:0;font-size:16px;letter-spacing:.2px}
-    .section-title span{color:var(--muted2);font-size:12.5px}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width: 920px){.grid2{grid-template-columns:1fr}}
-
-    .item{
-      padding:16px;border-radius:18px;
-      background: rgba(0,0,0,.16);
-      border:1px solid rgba(255,255,255,.10);
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-    }
-    .item:hover{transform: translateY(-2px);border-color: rgba(45,226,230,.35);background: rgba(0,0,0,.20)}
-    .item h3{margin:0 0 6px;font-size:13.5px}
-    .meta{color:var(--muted2);font-size:12.5px}
-    ul{margin:10px 0 0 18px;padding:0;color:rgba(234,240,255,.84);font-size:13px;line-height:1.45}
-    li{margin:6px 0}
-
-    .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
     .tag{
-      font-size:11.5px;padding:6px 9px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color: rgba(234,240,255,.78);
-    }
-
-    .contact-row{display:flex;gap:10px;flex-wrap:wrap}
-    .smalllink{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color: rgba(234,240,255,.86);
-      font-size:13px;
-    }
-    .smalllink:hover{border-color: rgba(124,92,255,.45);background: rgba(124,92,255,.10)}
-
-    footer{
-      margin-top:18px;
-      color: rgba(234,240,255,.48);
       font-size:12px;
-      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-      padding:0 4px;
+      color:rgba(255,255,255,0.80);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
     }
 
-    .reveal{
-      opacity:0; transform: translateY(10px) scale(.99);
-      transition: opacity .6s ease, transform .6s ease;
+    h1{
+      margin:0;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-0.8px;
     }
-    .reveal.on{
-      opacity:1; transform: translateY(0) scale(1);
+    .sub{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      max-width:64ch;
     }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:16px;
+      align-items:center;
+    }
+    .btn{
+      border:1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      cursor:pointer;
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(139,92,246,0.35), rgba(34,211,238,0.18));
+      border-color: rgba(139,92,246,0.40);
+    }
+    .btn.small{padding:8px 10px; border-radius:999px; font-weight:600}
+
+    .profile{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .avatar{
+      width:100%;
+      aspect-ratio: 1 / 1;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      transform: translateZ(0);
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .mini{
+      display:grid; grid-template-columns:1fr;
+      gap:10px;
+    }
+    .mini .box{
+      background: rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:14px;
+      padding:12px;
+    }
+    .mini .box b{display:block; font-size:12px; color:rgba(255,255,255,0.82); margin-bottom:6px}
+    .mini .box span{display:block; font-size:13px; color:var(--muted); line-height:1.4}
+
+    section{
+      margin-top:18px;
+      scroll-margin-top: 90px;
+    }
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:14px;
+      margin:0 0 10px;
+      padding:0 2px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.2px;
+    }
+    .sectionTitle .hint{
+      color:var(--muted2);
+      font-size:12px;
+    }
+
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 920px){
+      .two{grid-template-columns:1fr}
+      h1{font-size:36px}
+    }
+
+    .job, .proj{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .job:hover, .proj:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.065);
+      border-color: rgba(255,255,255,0.16);
+    }
+    .job h3, .proj h3{margin:0; font-size:14px}
+    .meta{
+      margin-top:6px;
+      color:var(--muted2);
+      font-size:12px;
+      display:flex;
+      gap:10px; flex-wrap:wrap;
+    }
+    ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .chip{
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.18);
+      color:rgba(255,255,255,0.78);
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 920px){
+      .skills{grid-template-columns:1fr}
+    }
+
+    .footer{
+      margin-top:22px;
+      color:var(--muted2);
+      font-size:12px;
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+      padding:0 2px;
+    }
+
+    .reveal{opacity:0; transform: translateY(10px); transition: opacity .45s ease, transform .45s ease}
+    .reveal.in{opacity:1; transform: translateY(0)}
   </style>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Laila Azizi</span>
+  <div class="wrap">
+    <div class="topbar" id="topbar">
+      <div class="brand" onclick="goTo('top')">
+        <div class="dot"></div>
+        <b>Laila Azizi</b>
       </div>
-      <nav>
-        <a class="navbtn" href="#work">Work</a>
-        <a class="navbtn" href="#projects">Projects</a>
-        <a class="navbtn" href="#skills">Skills</a>
-        <a class="navbtn" href="#contact">Contact</a>
-      </nav>
+      <div class="nav">
+        <div class="pill" data-target="work" onclick="goTo('work')">Work</div>
+        <div class="pill" data-target="projects" onclick="goTo('projects')">Projects</div>
+        <div class="pill" data-target="skills" onclick="goTo('skills')">Skills</div>
+        <div class="pill" data-target="education" onclick="goTo('education')">Education</div>
+        <div class="pill" data-target="contact" onclick="goTo('contact')">Contact</div>
+      </div>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="card hero-left reveal">
-        <div class="kickers">
-          <span class="pill">Data Research Analyst</span>
-          <span class="pill">Policy & Ops Analytics</span>
-          <span class="pill">Systems & QA Validation</span>
+    <div id="top" class="grid">
+      <div class="card pad reveal">
+        <div class="kicker">
+          <span class="tag">Data Research Analyst</span>
+          <span class="tag">Policy & Ops Analytics</span>
+          <span class="tag">Systems & QA Validation</span>
         </div>
-
         <h1>Turning messy reality into decisions you can ship.</h1>
-
-        <p class="sub">
-          I’m a Data Research Analyst with a Master’s in Statistics & Data Science. I connect the dots between
-          data quality, system behavior, and policy/ops impact — so teams can make decisions with confidence.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn primary" href="#projects">View featured projects</a>
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <div class="sub">
+          I’m a Data Research Analyst with a Master’s in Statistics & Data Science. I connect data quality, operational workflows,
+          and cross-functional communication to help teams move faster with confidence.
         </div>
-
-        <div class="chips">
-          <span class="chip">SQL • Python • R</span>
-          <span class="chip">Dashboards & Reporting</span>
-          <span class="chip">QA / Validation</span>
-          <span class="chip">Cross-functional collaboration</span>
+        <div class="cta">
+          <a class="btn primary" href="./resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
+          <button class="btn" onclick="goTo('projects')">View Projects</button>
         </div>
       </div>
 
-      <aside class="card hero-right reveal">
-        <div class="profile">
-          <div class="pf-top">
-            <div class="pf-img">
-              <img src="assets/headshot.jpg" alt="Laila Azizi headshot"/>
-            </div>
-            <div>
-              <div class="pf-name">Laila Azizi</div>
-              <div class="pf-loc">Fremont, CA • Open to hybrid / remote</div>
-            </div>
+      <div class="card pad profile reveal">
+        <div class="avatar" title="Headshot">
+          <img src="./assets/headshot.jpg" alt="Laila Azizi headshot">
+        </div>
+        <div class="mini">
+          <div class="box">
+            <b>Focus</b>
+            <span>Operational clarity, trustworthy metrics, and clean documentation that makes decisions easy.</span>
           </div>
-
-          <div class="pf-grid">
-            <div class="mini">
-              <h4>Focus</h4>
-              <p>Operational clarity, trustworthy metrics, and documentation that makes decisions easy.</p>
-            </div>
-            <div class="mini">
-              <h4>Strength</h4>
-              <p>Data validation + clean stakeholder writing (technical → readable, fast).</p>
-            </div>
-            <div class="mini">
-              <h4>Tooling</h4>
-              <p>SQL, Python, R • QA workflows • dashboards • analysis</p>
-            </div>
-            <div class="mini">
-              <h4>Domains</h4>
-              <p>Ops analytics • Policy-style insights • Systems / QA</p>
-            </div>
+          <div class="box">
+            <b>Based in</b>
+            <span>Fremont, CA • Open to hybrid / remote roles</span>
+          </div>
+          <div class="box">
+            <b>Tooling</b>
+            <span>SQL • Python • R • Dashboards • QA / Validation</span>
           </div>
         </div>
-      </aside>
-    </section>
+      </div>
+    </div>
 
-    <section id="work" class="card section reveal">
-      <div class="section-title">
+    <section id="work" class="reveal">
+      <div class="sectionTitle">
         <h2>Work Experience</h2>
-        <span>Impact-focused highlights</span>
+        <div class="hint">impact-focused highlights</div>
       </div>
-
-      <div class="grid2">
-        <div class="item">
+      <div class="two">
+        <div class="card job">
           <h3>Data Research / Systems Analyst — Google (via Accenture)</h3>
-          <div class="meta">Mountain View, CA</div>
+          <div class="meta"><span>Mountain View, CA</span><span>•</span><span>Systems validation • data quality • ops analytics</span></div>
           <ul>
-            <li>Supported system validation + data quality workflows across internal platforms.</li>
+            <li>Supported system validation and data quality workflows across internal platforms.</li>
             <li>Analyzed logs, datasets, and test results to inform ops + engineering decisions.</li>
             <li>Partnered cross-functionally to improve reliability, accuracy, and process clarity.</li>
           </ul>
-          <div class="tagrow">
-            <span class="tag">Validation</span><span class="tag">Debugging</span><span class="tag">Reporting</span>
+          <div class="chips">
+            <span class="chip">Validation</span><span class="chip">Debugging</span><span class="chip">Reporting</span>
           </div>
         </div>
 
-        <div class="item">
+        <div class="card job">
           <h3>Data Research Analyst — Meta (via Qualitest)</h3>
-          <div class="meta">Bay Area, CA</div>
+          <div class="meta"><span>Bay Area, CA</span><span>•</span><span>data collection/validation • review workflows</span></div>
           <ul>
             <li>Contributed to structured + unstructured data review workflows supporting research.</li>
             <li>Improved consistency and accuracy through careful validation and documentation.</li>
             <li>Worked with cross-functional teams to support research and operational goals.</li>
           </ul>
-          <div class="tagrow">
-            <span class="tag">Data QA</span><span class="tag">Process</span><span class="tag">Ops</span>
+          <div class="chips">
+            <span class="chip">Data QA</span><span class="chip">Process</span><span class="chip">Ops</span>
+          </div>
+        </div>
+
+        <div class="card job">
+          <h3>Data / Informatics Analyst — 113 Industries</h3>
+          <div class="meta"><span>Internship</span><span>•</span><span>data cleaning • analysis • reporting</span></div>
+          <ul>
+            <li>Worked on data preparation, quality checks, and analysis to support business reporting.</li>
+            <li>Built structured outputs and summaries to make datasets usable for stakeholders.</li>
+            <li>Improved consistency of inputs by standardizing formats and validation steps.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Data Cleaning</span><span class="chip">Insights</span><span class="chip">Documentation</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="card section reveal">
-      <div class="section-title">
+    <section id="projects" class="reveal">
+      <div class="sectionTitle">
         <h2>Featured Projects</h2>
-        <span>Add links as you publish them</span>
+        <div class="hint">add links as you publish them</div>
       </div>
-
-      <div class="grid2">
-        <div class="item">
+      <div class="two">
+        <div class="card proj">
           <h3>Detecting & Analyzing Harmful Content (Simulated Policy + Data Project)</h3>
-          <div class="meta">NLP concepts • analytics • policy-style insights</div>
+          <div class="meta"><span>NLP concepts</span><span>•</span><span>EDA</span><span>•</span><span>policy-style insights</span></div>
           <ul>
             <li>Analyzed simulated moderation datasets across regions and policy categories.</li>
-            <li>Built visual summaries to spot trends, risk clusters, and operational patterns.</li>
+            <li>Built summaries to spot trends, risk clusters, and operational patterns.</li>
             <li>Translated results into non-technical, policy-style recommendations.</li>
           </ul>
-          <div class="tagrow">
-            <span class="tag">Text + Data</span><span class="tag">EDA</span><span class="tag">Storytelling</span>
+          <div class="chips">
+            <span class="chip">Text + data</span><span class="chip">EDA</span><span class="chip">Storytelling</span>
           </div>
         </div>
 
-        <div class="item">
+        <div class="card proj">
           <h3>Predictive Analytics & Modeling (Mixed Portfolio)</h3>
-          <div class="meta">Forecasting • classification • regression • evaluation</div>
+          <div class="meta"><span>forecasting</span><span>•</span><span>classification</span><span>•</span><span>evaluation</span></div>
           <ul>
             <li>Built statistical + ML models for forecasting, classification, and regression.</li>
-            <li>Focused on model evaluation, interpretability, and data quality checks.</li>
+            <li>Focused on model evaluation, interpretability, and data quality.</li>
             <li>Applied analysis to real-world style operational and behavioral metrics.</li>
           </ul>
-          <div class="tagrow">
-            <span class="tag">Modeling</span><span class="tag">Metrics</span><span class="tag">Validation</span>
+          <div class="chips">
+            <span class="chip">Modeling</span><span class="chip">Metrics</span><span class="chip">Validation</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="card section reveal">
-      <div class="section-title">
+    <section id="skills" class="reveal">
+      <div class="sectionTitle">
         <h2>Skills</h2>
-        <span>What recruiters scan for</span>
+        <div class="hint">what recruiters scan for</div>
       </div>
-
-      <div class="grid2">
-        <div class="item">
-          <h3>Analytics</h3>
+      <div class="skills">
+        <div class="card pad">
+          <h3 style="margin:0 0 8px;font-size:14px;">Analytics</h3>
           <ul>
             <li>SQL, Python, R</li>
             <li>Exploratory analysis, dashboards, reporting</li>
-            <li>Experimental thinking + metric design</li>
+            <li>Experiment thinking + metric design</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Systems / Ops</h3>
+        <div class="card pad">
+          <h3 style="margin:0 0 8px;font-size:14px;">Systems / Ops</h3>
           <ul>
             <li>Data quality, QA, system validation</li>
             <li>Log-based investigation + issue triage</li>
@@ -427,49 +454,87 @@
       </div>
     </section>
 
-    <section id="contact" class="card section reveal">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <span>Replace placeholders with your real links</span>
+    <section id="education" class="reveal">
+      <div class="sectionTitle">
+        <h2>Education</h2>
+        <div class="hint">degrees</div>
       </div>
-
-      <div class="contact-row">
-        <a class="smalllink" href="mailto:your-email@example.com">Email: your-email@example.com</a>
-        <a class="smalllink" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="smalllink" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
-        <a class="smalllink" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      <div class="two">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;font-size:14px;">Master’s — Statistics & Data Science</h3>
+          <div class="meta"><span>Graduate program</span></div>
+          <div style="color:var(--muted); font-size:13px; line-height:1.55; margin-top:8px;">
+            Coursework includes applied statistics, data analysis, and NLP exposure through projects and assignments.
+          </div>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;font-size:14px;">Bachelor’s — Computer Science (Software Engineering)</h3>
+          <div class="meta"><span>Undergraduate</span></div>
+          <div style="color:var(--muted); font-size:13px; line-height:1.55; margin-top:8px;">
+            Foundation in programming, systems, and software development practices.
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <div>© 2026 Laila Azizi</div>
-      <div>Built on GitHub Pages • Fast • Recruiter-friendly</div>
-    </footer>
-  </main>
+    <section id="contact" class="reveal">
+      <div class="sectionTitle">
+        <h2>Contact</h2>
+        <div class="hint">real links (no placeholders)</div>
+      </div>
+      <div class="card pad">
+        <div class="cta">
+          <a class="btn small" href="mailto:azizilaila03@gmail.com">azizilaila03@gmail.com</a>
+          <a class="btn small" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn small" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn small" href="./resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="footer">
+        <span>© <span id="yr"></span> Laila Azizi</span>
+        <span>Built on GitHub Pages • fast • readable • recruiter-friendly</span>
+      </div>
+    </section>
+  </div>
 
   <script>
-    const reveal = () => {
-      const els = document.querySelectorAll('.reveal');
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-      els.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < vh - 60) el.classList.add('on');
-      });
-    };
-    window.addEventListener('scroll', reveal, {passive:true});
-    window.addEventListener('load', reveal);
+    const pills = [...document.querySelectorAll('.pill')];
 
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const id = a.getAttribute('href');
-        const target = document.querySelector(id);
-        if(!target) return;
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-        history.replaceState(null, '', id);
-      });
-    });
+    function setActive(id){
+      pills.forEach(p => p.classList.toggle('active', p.dataset.target === id));
+    }
+
+    function goTo(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null, '', id === 'top' ? '#top' : '#' + id);
+      if(id !== 'top') setActive(id);
+      else pills.forEach(p=>p.classList.remove('active'));
+    }
+
+    const io = new IntersectionObserver((entries)=>{
+      for(const e of entries){
+        if(e.isIntersecting) e.target.classList.add('in');
+      }
+    }, {threshold:0.12});
+
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const sections = ['work','projects','skills','education','contact'].map(id=>document.getElementById(id));
+    const spy = new IntersectionObserver((entries)=>{
+      const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(visible && visible.target && visible.target.id) setActive(visible.target.id);
+    }, {threshold:[0.2,0.35,0.5]});
+    sections.forEach(s=>spy.observe(s));
+
+    if(location.hash){
+      const id = location.hash.replace('#','');
+      setTimeout(()=>goTo(id), 150);
+    } else {
+      history.replaceState(null,'','#top');
+    }
   </script>
 </body>
 </html>
-
