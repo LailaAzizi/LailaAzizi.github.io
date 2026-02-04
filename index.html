@@ -1,218 +1,781 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laila Azizi | Data Research Analyst</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laila Azizi — Data Research Analyst</title>
+  <meta name="description" content="Laila Azizi — Data Research Analyst. Research/Ops analytics, data quality, QA validation, dashboards, and stakeholder-ready insights." />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f6f8ff;
+      --bg2:#ffffff;
+      --text:#0b1220;
+      --muted:#4b5567;
+      --card: rgba(255,255,255,.72);
+      --stroke: rgba(15,23,42,.12);
+      --shadow: 0 22px 70px rgba(15,23,42,.12);
+      --shadow2: 0 10px 30px rgba(15,23,42,.10);
+      --brand:#4f46e5;
+      --brand2:#7c3aed;
+      --pill:#eef2ff;
+      --pillText:#1f2a44;
+      --radius: 22px;
+      --radius2: 16px;
+    }
 
-<style>
-:root{
-  --bg:#f6f8fc;
-  --card:#ffffff;
-  --primary:#4f46e5;
-  --text:#0f172a;
-  --muted:#475569;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% 0%, rgba(79,70,229,.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 10%, rgba(124,58,237,.16), transparent 55%),
+        radial-gradient(1000px 700px at 50% 100%, rgba(59,130,246,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), #ffffff 45%, #f7f9ff 100%);
+      overflow-x:hidden;
+    }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter,system-ui;
-  background:linear-gradient(180deg,#eef2ff,#f8fafc);
-  color:var(--text);
-}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
 
-.container{max-width:1100px;margin:auto;padding:40px 20px}
+    /* Top floating nav */
+    .topbar{
+      position:sticky; top:14px; z-index:50;
+      display:flex; justify-content:center;
+      padding:10px 0;
+    }
+    .nav{
+      display:flex; gap:10px; align-items:center;
+      padding:10px;
+      background:rgba(255,255,255,.7);
+      border:1px solid var(--stroke);
+      border-radius:999px;
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .nav a{
+      position:relative;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:650;
+      color:#1b2440;
+      opacity:.85;
+      transition: transform .18s ease, background .18s ease, opacity .18s ease;
+      outline:none;
+    }
+    .nav a:hover{background:rgba(79,70,229,.10); transform: translateY(-1px); opacity:1}
+    .nav a.active{
+      background: linear-gradient(135deg, rgba(79,70,229,.18), rgba(124,58,237,.14));
+      border: 1px solid rgba(79,70,229,.22);
+      opacity:1;
+    }
 
-header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #e5e7eb;
-}
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; }
+    }
 
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  max-width:1100px;margin:auto;padding:14px 20px;
-}
+    .card{
+      background: var(--card);
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
 
-nav a{
-  text-decoration:none;color:var(--text);font-weight:500;
-  margin-left:22px;
-}
+    .heroLeft{padding:26px 26px 22px; position:relative; overflow:hidden;}
+    .heroLeft:before{
+      content:"";
+      position:absolute; inset:-80px -120px auto auto;
+      width:320px; height:320px;
+      background: radial-gradient(circle at 30% 30%, rgba(79,70,229,.28), transparent 55%),
+                  radial-gradient(circle at 70% 70%, rgba(124,58,237,.22), transparent 60%);
+      filter: blur(0px);
+      transform: rotate(12deg);
+      opacity:.9;
+      pointer-events:none;
+    }
 
-.hero{
-  display:grid;grid-template-columns:1.3fr .7fr;gap:40px;
-  align-items:center;margin-top:40px;
-}
+    .kicker{
+      display:flex; gap:8px; flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .pill{
+      background: var(--pill);
+      border:1px solid rgba(79,70,229,.12);
+      color: var(--pillText);
+      padding:7px 10px;
+      border-radius:999px;
+      font-weight:650;
+      font-size:12.5px;
+    }
 
-.hero-card{
-  background:var(--card);
-  border-radius:22px;
-  padding:40px;
-  box-shadow:0 30px 80px rgba(15,23,42,.12);
-}
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      max-width:60ch;
+    }
 
-.hero h1{font-size:44px;margin:0 0 16px}
-.hero p{color:var(--muted);line-height:1.7}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:8px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 10px 20px rgba(15,23,42,.08);
+      font-weight:750;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover{transform: translateY(-2px); box-shadow: 0 18px 30px rgba(15,23,42,.12)}
+    .btn.primary{
+      border: 1px solid rgba(79,70,229,.20);
+      background: linear-gradient(135deg, rgba(79,70,229,.92), rgba(124,58,237,.92));
+      color:white;
+    }
 
-.buttons a{
-  display:inline-block;margin-right:12px;margin-top:16px;
-  padding:12px 20px;border-radius:14px;
-  background:var(--primary);color:white;
-  text-decoration:none;font-weight:600;
-}
+    .chips{
+      margin-top:14px;
+      display:flex; gap:8px; flex-wrap:wrap;
+    }
+    .chip{
+      padding:8px 10px;
+      border-radius:999px;
+      font-weight:650;
+      font-size:12.5px;
+      border:1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.68);
+      color:#1b2440;
+    }
 
-.avatar{
-  width:220px;height:220px;
-  border-radius:28px;
-  padding:6px;
-  background:linear-gradient(135deg,#4f46e5,#7c3aed);
-  box-shadow:0 40px 90px rgba(79,70,229,.4);
-  transition:transform .4s;
-}
-.avatar:hover{transform:translateY(-8px) rotateX(6deg) rotateY(-6deg)}
-.avatar img{
-  width:100%;height:100%;object-fit:cover;
-  border-radius:22px;background:white;
-}
+    /* Profile card */
+    .heroRight{padding:18px; display:flex; flex-direction:column; gap:12px}
+    .profileTop{
+      display:flex; gap:14px; align-items:center;
+      padding:14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.75);
+      border:1px solid rgba(15,23,42,.10);
+      box-shadow: 0 12px 26px rgba(15,23,42,.10);
+      position:relative;
+      overflow:hidden;
+    }
+    .profileTop:before{
+      content:"";
+      position:absolute; inset:auto -60px -60px auto;
+      width:220px; height:220px;
+      background: radial-gradient(circle at 30% 30%, rgba(79,70,229,.20), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(124,58,237,.18), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .avatar{
+      width:96px; height:96px;
+      border-radius: 22px;
+      overflow:hidden;
+      flex:0 0 auto;
+      border: 1px solid rgba(15,23,42,.14);
+      box-shadow: 0 18px 45px rgba(15,23,42,.18);
+      transform: translateZ(0);
+      background:#fff;
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+    }
+    .nameBlock{position:relative; z-index:1}
+    .nameBlock .name{font-weight:900; font-size:18px; margin:0}
+    .nameBlock .loc{margin:4px 0 0; color:var(--muted); font-weight:650}
 
-section{margin-top:80px}
-section h2{font-size:32px;margin-bottom:24px}
+    .miniGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .mini{
+      padding:14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      border:1px solid rgba(15,23,42,.10);
+      box-shadow: 0 12px 26px rgba(15,23,42,.08);
+      transition: transform .18s ease;
+    }
+    .mini:hover{transform: translateY(-2px)}
+    .mini h3{
+      margin:0 0 6px;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#24314f;
+      opacity:.75;
+    }
+    .mini p{margin:0;color:#1b2440;font-weight:750;font-size:13.5px;line-height:1.35}
 
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
-}
+    /* Sections */
+    section{margin-top:18px}
+    .sectionTitle{
+      margin:22px 0 10px;
+      font-size:20px;
+      letter-spacing:-.01em;
+    }
+    .sectionHint{color:var(--muted); font-weight:650; font-size:13.5px; margin:0 0 14px}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 920px){
+      .grid2{grid-template-columns:1fr}
+    }
 
-.card{
-  background:var(--card);
-  padding:24px;
-  border-radius:20px;
-  box-shadow:0 20px 50px rgba(15,23,42,.08);
-}
+    .block{padding:18px}
+    .block h4{margin:0 0 6px; font-size:15px}
+    .meta{color:var(--muted); font-weight:650; font-size:13px; margin:0 0 10px}
+    ul{margin:10px 0 0; padding-left:18px; color:#1b2440}
+    li{margin:7px 0; line-height:1.45}
 
-.cert img{
-  width:100%;
-  border-radius:14px;
-  transition:transform .3s,box-shadow .3s;
-}
-.cert img:hover{
-  transform:scale(1.05);
-  box-shadow:0 25px 60px rgba(15,23,42,.25);
-}
+    /* Projects & Certs cards */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 920px){
+      .cards{grid-template-columns:1fr}
+    }
+    .proj{
+      padding:18px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.75);
+      border:1px solid rgba(15,23,42,.10);
+      box-shadow: 0 18px 40px rgba(15,23,42,.10);
+      transition: transform .18s ease, box-shadow .18s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .proj:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 26px 55px rgba(15,23,42,.14);
+    }
+    .proj .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{
+      font-size:12px;
+      font-weight:700;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,.12);
+      background: rgba(238,242,255,.7);
+      color:#1f2a44;
+    }
 
-footer{
-  margin-top:100px;padding:40px 0;text-align:center;
-  color:var(--muted);
-}
-</style>
+    .certGrid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 1100px){
+      .certGrid{grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width: 560px){
+      .certGrid{grid-template-columns: 1fr;}
+    }
+    .cert{
+      padding:14px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.78);
+      border:1px solid rgba(15,23,42,.10);
+      box-shadow: 0 16px 34px rgba(15,23,42,.10);
+      transition: transform .18s ease;
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height:220px;
+    }
+    .cert:hover{transform: translateY(-3px)}
+    .thumb{
+      height:130px;
+      border-radius: 16px;
+      border:1px solid rgba(15,23,42,.10);
+      background: linear-gradient(135deg, rgba(79,70,229,.08), rgba(124,58,237,.06));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .certTitle{margin:0;font-weight:900}
+    .certSub{margin:0;color:var(--muted);font-weight:650}
+
+    /* Modal */
+    .modalBack{
+      position:fixed; inset:0;
+      background: rgba(15,23,42,.35);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:100;
+    }
+    .modal{
+      width:min(980px, 96vw);
+      border-radius: 20px;
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(15,23,42,.12);
+      box-shadow: 0 30px 90px rgba(15,23,42,.25);
+      overflow:hidden;
+      transform: translateY(10px);
+      opacity:0;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .modalHead{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 16px;
+      border-bottom:1px solid rgba(15,23,42,.10);
+    }
+    .modalHead strong{font-size:15px}
+    .modalActions{display:flex; gap:10px; align-items:center}
+    .xbtn{
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(15,23,42,.14);
+      background: rgba(255,255,255,.9);
+      font-weight:850;
+      cursor:pointer;
+    }
+    .modalBody{
+      padding:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(246,248,255,.92));
+    }
+    .modalImg{
+      width:100%;
+      max-height:70vh;
+      object-fit:contain;
+      border-radius: 14px;
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
+      display:block;
+    }
+    .modalNote{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+
+    /* Footer */
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+      text-align:center;
+    }
+
+    /* Smooth section reveal */
+    .reveal{opacity:0; transform: translateY(10px); transition: opacity .35s ease, transform .35s ease}
+    .reveal.on{opacity:1; transform: translateY(0)}
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-<header>
-<nav>
-<strong>Laila Azizi</strong>
-<div>
-<a href="#education">Education</a>
-<a href="#work">Work</a>
-<a href="#skills">Skills</a>
-<a href="#certs">Certificates</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-</header>
+    <div class="topbar">
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 
-<div class="container">
+    <div class="hero">
+      <div class="card heroLeft reveal">
+        <div class="kicker">
+          <span class="pill">Data Research Analyst</span>
+          <span class="pill">Ops / Policy Analytics</span>
+          <span class="pill">Systems & QA Validation</span>
+        </div>
 
-<section class="hero">
-<div class="hero-card">
-<h1>Turning messy reality into decisions you can ship.</h1>
-<p>
-Data Research Analyst with a Master’s in Statistics & Data Science.
-Experience across Google (via Accenture), Meta (via Qualitest),
-and applied analytics in fast-moving environments.
-</p>
-<div class="buttons">
-<a href="assets/resume.pdf" target="_blank">Resume (PDF)</a>
-<a href="https://www.linkedin.com/in/lailaazizi/" target="_blank">LinkedIn</a>
-<a href="https://github.com/LailaAzizi" target="_blank">GitHub</a>
-</div>
-</div>
+        <h1>Turning messy reality into decisions you can ship.</h1>
+        <p class="sub">
+          I connect the dots between <b>data quality</b>, <b>system behavior</b>, and <b>operational impact</b>.
+          I’ve supported research/ops workflows in fast-moving environments (Google via Accenture, Meta via Qualitest, 113 Industries),
+          and I’m known for clear documentation and stakeholder-ready insights.
+        </p>
 
-<div class="avatar">
-<img src="assets/headshot.jpg" alt="Laila Azizi">
-</div>
-</section>
+        <div class="ctaRow">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
 
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-<strong>Master of Science — Statistics & Data Science</strong><br>
-<strong>Bachelor of Science — Computer Science (Software Engineering)</strong>
-</div>
-</section>
+        <div class="chips" aria-label="Highlights">
+          <span class="chip">SQL • Python • R</span>
+          <span class="chip">Dashboards & reporting</span>
+          <span class="chip">QA / validation</span>
+          <span class="chip">Data quality</span>
+          <span class="chip">Cross-functional collaboration</span>
+        </div>
+      </div>
 
-<section id="work">
-<h2>Work Experience</h2>
-<div class="card-grid">
-<div class="card">
-<strong>Data Research / Systems Analyst — Google (via Accenture)</strong>
-<p>System validation, data quality, operational analytics.</p>
-</div>
-<div class="card">
-<strong>Data Research Analyst — Meta (via Qualitest)</strong>
-<p>Data review workflows, validation, research support.</p>
-</div>
-<div class="card">
-<strong>Software / Data Analyst — 113 Industries</strong>
-<p>Applied analytics, dashboards, and system-level analysis.</p>
-</div>
-</div>
-</section>
+      <div class="card heroRight reveal">
+        <div class="profileTop">
+          <div class="avatar" title="Laila Azizi">
+            <img src="assets/headshot.jpg" alt="Laila Azizi headshot" />
+          </div>
+          <div class="nameBlock">
+            <p class="name">Laila Azizi</p>
+            <p class="loc">Fremont, CA • Open to Hybrid / Remote</p>
+          </div>
+        </div>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="card">
-SQL • Python • R • Data Quality • QA Validation • Analytics • Documentation
-</div>
-</section>
+        <div class="miniGrid">
+          <div class="mini">
+            <h3>Focus</h3>
+            <p>Operational clarity, trustworthy metrics, and documentation that makes decisions easier.</p>
+          </div>
+          <div class="mini">
+            <h3>Strength</h3>
+            <p>Turning logs + datasets into stakeholder-ready insights.</p>
+          </div>
+          <div class="mini">
+            <h3>Tooling</h3>
+            <p>Python • SQL • R • Excel</p>
+          </div>
+          <div class="mini">
+            <h3>Domains</h3>
+            <p>Ops • Research • Policy • QA</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section id="certs">
-<h2>Certificates</h2>
-<div class="card-grid">
-<div class="card cert"><img src="assets/cert-google-data-analytics.png"></div>
-<div class="card cert"><img src="assets/cert-python.png"></div>
-<div class="card cert"><img src="assets/cert-java.png"></div>
-<div class="card cert"><img src="assets/cert-maketechpurple-2025.png"></div>
-</div>
-</section>
+    <!-- WORK -->
+    <section id="work" class="reveal">
+      <h2 class="sectionTitle">Work Experience</h2>
+      <p class="sectionHint">Clean, recruiter-friendly bullets (no fluff).</p>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="card">
-Policy analytics, data quality frameworks, dashboards, and operational insights.
-</div>
-</section>
+      <div class="grid2">
+        <div class="card block">
+          <h4>Data Research / Systems Analyst — Google (via Accenture)</h4>
+          <p class="meta">Mountain View, CA • Contract</p>
+          <ul>
+            <li>Supported system validation and data quality workflows across internal platforms.</li>
+            <li>Reviewed logs, datasets, and test outputs to inform operational + engineering decisions.</li>
+            <li>Partnered cross-functionally to improve reliability, accuracy, and process clarity.</li>
+          </ul>
+        </div>
 
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-Email: azizilaila03@gmail.com
-</div>
-</section>
+        <div class="card block">
+          <h4>Data Research Analyst — Meta (via Qualitest)</h4>
+          <p class="meta">Bay Area, CA • Contract</p>
+          <ul>
+            <li>Contributed to structured + unstructured data review workflows supporting research.</li>
+            <li>Improved consistency and accuracy through careful validation and documentation.</li>
+            <li>Worked with cross-functional teams to support research and operational goals.</li>
+          </ul>
+        </div>
 
-</div>
+        <div class="card block">
+          <h4>Data / Informatics Analyst — 113 Industries</h4>
+          <p class="meta">Internship / Contract</p>
+          <ul>
+            <li>Supported data analysis and reporting for project and operational needs.</li>
+            <li>Worked with structured datasets: cleaning, basic analysis, and summarizing insights.</li>
+            <li>Communicated results in clear, stakeholder-friendly language.</li>
+          </ul>
+        </div>
 
-<footer>
-© 2026 Laila Azizi
-</footer>
+        <div class="card block">
+          <h4>Education</h4>
+          <p class="meta">Degrees + program certification</p>
+          <ul>
+            <li><b>M.S.</b> — Statistics & Data Science</li>
+            <li><b>B.S.</b> — Computer Science (Software Engineering)</li>
+            <li><b>MakeTechPurple</b> — Project Management Cohort (Aug 2025)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <h2 class="sectionTitle">Projects</h2>
+      <p class="sectionHint">Pick 2–4 strongest projects. Each should answer: problem → approach → outcome.</p>
+
+      <div class="cards">
+        <div class="proj">
+          <h3 style="margin:0 0 8px;font-size:18px;">Detecting & Analyzing Harmful Content (Policy + Data)</h3>
+          <p class="meta">NLP / moderation analytics • dashboards • policy-style insights</p>
+          <ul>
+            <li>Analyzed patterns across regions and categories to surface high-risk clusters.</li>
+            <li>Translated findings into actionable recommendations for non-technical stakeholders.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">NLP</span><span class="tag">EDA</span><span class="tag">Storytelling</span><span class="tag">Policy</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0 0 8px;font-size:18px;">ShelfAware (PM Capstone): AI Shelf Scanner</h3>
+          <p class="meta">Product thinking • operational ROI • real-world workflow design</p>
+          <ul>
+            <li>Designed a concept to detect expired/misplaced/missing products in real time.</li>
+            <li>Framed value via time saved, shrink reduction, and improved store operations.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Product</span><span class="tag">Ops</span><span class="tag">ROI</span><span class="tag">AI</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0 0 8px;font-size:18px;">Predictive Analytics & Modeling</h3>
+          <p class="meta">Forecasting / classification • evaluation • interpretability</p>
+          <ul>
+            <li>Built baseline models and focused on evaluation, data quality checks, and clarity.</li>
+            <li>Presented results as practical insights, not just metrics.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Modeling</span><span class="tag">Metrics</span><span class="tag">Validation</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <h3 style="margin:0 0 8px;font-size:18px;">Research/Ops Workflow Support (Systems + QA)</h3>
+          <p class="meta">Process • validation • cross-functional delivery</p>
+          <ul>
+            <li>Supported fast-paced internal workflows where accuracy and clarity matter.</li>
+            <li>Improved documentation and handoffs to reduce rework and confusion.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">QA</span><span class="tag">Ops</span><span class="tag">Documentation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <h2 class="sectionTitle">Skills</h2>
+      <p class="sectionHint">Readable, spaced, and grouped for scanning.</p>
+
+      <div class="grid2">
+        <div class="card block">
+          <h4>Analytics</h4>
+          <ul>
+            <li>SQL, Python, R, Excel</li>
+            <li>Exploratory analysis, reporting, dashboards</li>
+            <li>Experiment thinking • metric design (basic)</li>
+          </ul>
+        </div>
+
+        <div class="card block">
+          <h4>Systems / Ops</h4>
+          <ul>
+            <li>Data quality, QA validation</li>
+            <li>Log-based investigation • issue triage</li>
+            <li>Clear documentation for cross-functional teams</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="reveal">
+      <h2 class="sectionTitle">Certificates</h2>
+      <p class="sectionHint">Click any certificate to preview. If an image fails, it means the filename/path doesn’t match.</p>
+
+      <div class="certGrid">
+        <div class="cert" data-title="Google Data Analytics" data-src="assets/cert-google-data-analytics.png">
+          <div class="thumb">
+            <img src="assets/cert-google-data-analytics.png" alt="Google Data Analytics Certificate" />
+          </div>
+          <p class="certTitle">Google Data Analytics</p>
+          <p class="certSub">Click to preview</p>
+        </div>
+
+        <div class="cert" data-title="Python Certificate" data-src="assets/cert-python.png">
+          <div class="thumb">
+            <img src="assets/cert-python.png" alt="Python Certificate" />
+          </div>
+          <p class="certTitle">Python</p>
+          <p class="certSub">Click to preview</p>
+        </div>
+
+        <div class="cert" data-title="Java Certificate" data-src="assets/cert-java.png">
+          <div class="thumb">
+            <img src="assets/cert-java.png" alt="Java Certificate" />
+          </div>
+          <p class="certTitle">Java</p>
+          <p class="certSub">Click to preview</p>
+        </div>
+
+        <div class="cert" data-title="MakeTechPurple (2025)" data-src="assets/cert-maketechpurple-2025.png">
+          <div class="thumb">
+            <img src="assets/cert-maketechpurple-2025.png" alt="MakeTechPurple Certificate" />
+          </div>
+          <p class="certTitle">MakeTechPurple (2025)</p>
+          <p class="certSub">Click to preview</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2 class="sectionTitle">Contact</h2>
+      <p class="sectionHint">Real links only.</p>
+
+      <div class="card block">
+        <p style="margin:0 0 10px; font-weight:750;">Email: <a href="mailto:azizilaila03@gmail.com" style="color:var(--brand);font-weight:900;">azizilaila03@gmail.com</a></p>
+        <p style="margin:0 0 10px; font-weight:750;">LinkedIn: <a href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noreferrer" style="color:var(--brand);font-weight:900;">linkedin.com/in/lailaazizi</a></p>
+        <p style="margin:0; font-weight:750;">GitHub: <a href="https://github.com/LailaAzizi" target="_blank" rel="noreferrer" style="color:var(--brand);font-weight:900;">github.com/LailaAzizi</a></p>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> Laila Azizi • Built on GitHub Pages</footer>
+  </div>
+
+  <!-- Certificate modal -->
+  <div class="modalBack" id="modalBack" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+      <div class="modalHead">
+        <strong id="modalTitle">Certificate</strong>
+        <div class="modalActions">
+          <a class="xbtn" id="openNewTab" href="#" target="_blank" rel="noreferrer">Open</a>
+          <button class="xbtn" id="closeModal" type="button">Close</button>
+        </div>
+      </div>
+      <div class="modalBody">
+        <img class="modalImg" id="modalImg" alt="Certificate preview" />
+        <p class="modalNote" id="modalNote">Tip: If this image doesn’t load, check the filename and make sure it’s inside /assets/.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll
+    document.querySelectorAll('.nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        if(!id || !id.startsWith('#')) return;
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Scrollspy active link
+    const sections = ['#work','#projects','#skills','#certificates','#contact']
+      .map(id=>document.querySelector(id))
+      .filter(Boolean);
+
+    const navLinks = Array.from(document.querySelectorAll('.nav a'));
+    const setActive = (hash)=>{
+      navLinks.forEach(l=>l.classList.toggle('active', l.getAttribute('href')===hash));
+    };
+
+    const spy = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          setActive('#'+entry.target.id);
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold: 0.01});
+
+    sections.forEach(s=>spy.observe(s));
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting) en.target.classList.add('on');
+      });
+    }, {threshold:.08});
+    reveals.forEach(r=>revObs.observe(r));
+
+    // Certificate modal
+    const modalBack = document.getElementById('modalBack');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImg = document.getElementById('modalImg');
+    const openNewTab = document.getElementById('openNewTab');
+    const closeModal = document.getElementById('closeModal');
+
+    function openModal(title, src){
+      modalTitle.textContent = title || 'Certificate';
+      modalImg.src = src;
+      openNewTab.href = src;
+
+      modalBack.style.display = 'flex';
+      modalBack.setAttribute('aria-hidden','false');
+
+      requestAnimationFrame(()=>{
+        modal.style.opacity = '1';
+        modal.style.transform = 'translateY(0)';
+      });
+    }
+
+    function hideModal(){
+      modal.style.opacity = '0';
+      modal.style.transform = 'translateY(10px)';
+      setTimeout(()=>{
+        modalBack.style.display = 'none';
+        modalBack.setAttribute('aria-hidden','true');
+      }, 160);
+    }
+
+    document.querySelectorAll('.cert').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        openModal(card.dataset.title, card.dataset.src);
+      });
+    });
+
+    closeModal.addEventListener('click', hideModal);
+    modalBack.addEventListener('click', (e)=>{
+      if(e.target === modalBack) hideModal();
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape' && modalBack.style.display === 'flex') hideModal();
+    });
+
+    // Fallback if images fail to load: show a simple message in the thumbnail
+    document.querySelectorAll('.thumb img').forEach(img=>{
+      img.addEventListener('error', ()=>{
+        const box = img.closest('.thumb');
+        box.innerHTML = '<div style="padding:14px;text-align:center;color:#4b5567;font-weight:800;">Image not found<br/><span style="font-weight:700;font-size:12px;opacity:.9;">Check /assets filename</span></div>';
+      });
+    });
+  </script>
 </body>
 </html>
