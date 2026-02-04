@@ -1,262 +1,242 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Laila Azizi | Data Research Analyst</title>
-  <meta name="description" content="Portfolio of Laila Azizi — Data Research Analyst focused on policy & operations analytics, systems validation, and data quality." />
+  <meta name="description" content="Portfolio of Laila Azizi — Data Research Analyst (Policy & Ops Analytics, Systems & QA Validation)."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0b1020;
-      --panel:#111936;
-      --card:#0f1733;
-      --text:#e8ecff;
-      --muted:#b9c1ffcc;
-      --line:#2a3566;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.09);
+      --text:#eaf0ff;
+      --muted: rgba(234,240,255,.72);
+      --muted2: rgba(234,240,255,.55);
+      --line: rgba(255,255,255,.12);
       --accent:#7c5cff;
-      --accent2:#23c6ff;
-      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --accent2:#23d5ab;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 18px;
-      --max: 1040px;
+      --radius2: 26px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
+    html,body{height:100%}
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
-                  radial-gradient(1000px 600px at 100% 0%, rgba(35,198,255,.18), transparent 55%),
-                  linear-gradient(180deg, var(--bg), #070a14 55%);
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.6;
+      background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(900px 700px at 90% 15%, rgba(35,213,171,.18), transparent 55%),
+        radial-gradient(900px 700px at 60% 90%, rgba(124,92,255,.14), transparent 55%),
+        linear-gradient(180deg, #070a14, var(--bg));
+      overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding: 28px 18px 80px}
+    a{color:inherit}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding: 28px 18px 70px;
+    }
     .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 10px 0 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 10px 2px 26px;
     }
     .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.2px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
     }
     .dot{
-      width:10px;height:10px;border-radius:50%;
+      width:12px;height:12px;border-radius:999px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: 0 0 0 6px rgba(124,92,255,.12);
     }
-    .nav{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
-    .nav a{color:var(--muted); font-weight:600; font-size:14px}
-    .nav a:hover{color:var(--text)}
+    .brand span{
+      font-weight:700;
+      letter-spacing:.2px;
+      opacity:.95;
+    }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .chip{
+      text-decoration:none;
+      font-weight:600;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      transition: transform .15s ease, background .15s ease;
+    }
+    .chip:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
     .hero{
       display:grid;
-      grid-template-columns: 1.4fr .9fr;
-      gap: 20px;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
       align-items:stretch;
       margin-top: 6px;
     }
-    .panel{
-      background: linear-gradient(180deg, rgba(17,25,54,.9), rgba(15,23,51,.78));
-      border: 1px solid rgba(42,53,102,.9);
-      border-radius: var(--radius);
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; }
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .hero-left{padding: 26px 26px 22px}
+    .heroMain{padding: 26px 26px 22px;}
     .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(42,53,102,.9);
-      background: rgba(8,12,26,.6);
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
       color: var(--muted);
-      font-weight:700;
-      font-size:13px;
+      font-weight:600;
+      font-size: 13px;
     }
-    .kicker b{color: var(--text)}
+    .pill{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;
+      border-radius:999px;
+    }
     h1{
-      margin: 14px 0 8px;
-      font-size: 44px;
-      line-height: 1.1;
-      letter-spacing: -.6px;
+      margin:14px 0 10px;
+      font-size: 42px;
+      line-height:1.05;
+      letter-spacing:-.7px;
     }
-    .title{
-      margin: 0 0 14px;
-      font-size: 16px;
+    @media (max-width: 520px){
+      h1{font-size:34px}
+    }
+    .subtitle{
       color: var(--muted);
-      font-weight: 650;
-    }
-    .summary{
+      font-size: 15px;
+      line-height:1.65;
       margin: 0 0 18px;
-      color: #d9deff;
-      font-size: 16px;
-      max-width: 70ch;
+      max-width: 62ch;
     }
-    .cta{
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin-top: 10px;
-    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top: 8px;}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
       gap:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
       padding: 12px 14px;
       border-radius: 12px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.55);
-      font-weight:800;
-      font-size: 14px;
-      color: var(--text);
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(124,92,255,.55)}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(35,198,255,.85));
-      border-color: transparent;
-      color: #071022;
-      box-shadow: 0 14px 34px rgba(124,92,255,.25);
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22);}
+    .btnPrimary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #4c9bff);
+      box-shadow: 0 16px 40px rgba(124,92,255,.25);
     }
-    .btn.primary:hover{transform: translateY(-2px)}
-    .hero-right{
-      display:flex; flex-direction:column;
-      padding: 18px;
+    .btnPrimary:hover{background: linear-gradient(135deg, #8b72ff, #4c9bff);}
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
       gap: 14px;
+      padding: 0 0 0 0;
+    }
+    @media (max-width: 900px){ .grid2{grid-template-columns:1fr;} }
+    .heroSide{
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
     }
     .photo{
-      border-radius: 16px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.55);
-      padding: 14px;
-      display:flex; gap:14px; align-items:center;
-    }
-    .avatar{
-      width:86px; height:86px;
       border-radius: 18px;
-      border: 1px solid rgba(42,53,102,.95);
       overflow:hidden;
-      background: rgba(17,25,54,.7);
-      flex: 0 0 auto;
-      display:grid; place-items:center;
-      color: var(--muted);
-      font-weight:900;
-      letter-spacing:.2px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
     }
-    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
-    .photo-meta{min-width:0}
-    .photo-meta .name{font-weight:900; font-size:16px; margin:0}
-    .photo-meta .loc{margin:4px 0 0; color: var(--muted); font-weight:650; font-size:13px}
-    .quick{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      flex:1;
+    .photo img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
     }
-    .stat{
-      padding: 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.55);
+    .mini{
+      padding: 14px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
     }
-    .stat .label{color: var(--muted); font-weight:750; font-size:12px; text-transform:uppercase; letter-spacing:.9px}
-    .stat .value{margin: 8px 0 0; font-size: 14px; font-weight:850}
+    .mini h3{margin:0 0 6px; font-size:14px; letter-spacing:.1px}
+    .mini p{margin:0; color: var(--muted); font-size: 13px; line-height:1.55}
     .section{
-      margin-top: 26px;
+      margin-top: 18px;
       padding: 22px;
     }
-    .section h2{
-      margin: 0 0 10px;
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      padding: 20px 22px 0;
+    }
+    .sectionTitle h2{
+      margin:0;
       font-size: 18px;
-      letter-spacing:.2px;
+      letter-spacing:-.2px;
     }
-    .section p{margin: 0; color: #d9deff}
-    .grid{
-      margin-top: 14px;
+    .sectionTitle span{
+      color: var(--muted2);
+      font-size: 13px;
+    }
+    .cards{
       display:grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 14px;
+      padding: 16px 22px 22px;
     }
-    .card{
-      grid-column: span 6;
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.45);
-      box-shadow: 0 8px 26px rgba(0,0,0,.22);
+    @media (max-width: 900px){ .cards{grid-template-columns:1fr;} }
+    .item{
+      padding: 16px 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .meta{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px}
-    .pill{
+    .item:hover{transform: translateY(-2px); background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2);}
+    .item h3{margin:0 0 6px; font-size: 15px;}
+    .meta{color: var(--muted2); font-size: 12.5px; margin:0 0 10px;}
+    .item ul{margin:0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height:1.6;}
+    .badgeRow{display:flex; flex-wrap:wrap; gap:8px; margin-top: 10px;}
+    .badge{
       font-size: 12px;
-      font-weight:800;
-      color: #0b1020;
-      background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(35,198,255,.8));
-      padding: 6px 10px;
+      color: rgba(234,240,255,.82);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      padding: 7px 9px;
       border-radius: 999px;
-    }
-    .card p{margin: 0 0 10px; color: #d9deff}
-    .proj-img{
-      width:100%;
-      height: 170px;
-      border-radius: 14px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(17,25,54,.55);
-      overflow:hidden;
-      margin: 10px 0 12px;
-      display:grid; place-items:center;
-      color: var(--muted);
-      font-weight:800;
-      font-size: 13px;
-    }
-    .proj-img img{width:100%; height:100%; object-fit:cover; display:block}
-    .kv{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin: 10px 0 12px;
-    }
-    .kv div{
-      border-left: 3px solid rgba(124,92,255,.6);
-      padding-left: 10px;
-      color: #d9deff;
-      font-size: 13.5px;
-    }
-    .actions{display:flex; gap:10px; flex-wrap:wrap}
-    .actions a{font-size:13px}
-    .timeline{
-      margin-top: 12px;
-      display:grid; gap:12px;
-    }
-    .role{
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.45);
-    }
-    .role .top{
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-    }
-    .role .top b{font-size:14px}
-    .role .top span{color: var(--muted); font-weight:700; font-size:13px}
-    .role ul{margin: 10px 0 0 18px; color:#d9deff}
-    .tags{display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px}
-    .tag{
-      border: 1px solid rgba(42,53,102,.95);
-      background: rgba(7,10,20,.55);
-      padding: 8px 10px;
-      border-radius: 999px;
-      font-weight:800;
-      font-size: 13px;
-      color: #d9deff;
     }
     .footer{
-      margin-top: 26px;
+      margin-top: 16px;
       padding: 18px 22px;
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      color: var(--muted);
-      font-weight:650;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted2);
       font-size: 13px;
     }
-    @media (max-width: 920px){
-      .hero{grid-template-columns: 1fr}
-      .card{grid-column: span 12}
-      h1{font-size: 38px}
+    .smallLinks a{
+      text-decoration:none;
+      border-bottom: 1px dotted rgba(255,255,255,.25);
     }
   </style>
 </head>
@@ -265,183 +245,174 @@
   <div class="wrap">
 
     <div class="topbar">
-      <div class="brand"><span class="dot"></span> Laila Azizi</div>
+      <a class="brand" href="#">
+        <div class="dot"></div>
+        <span>Laila Azizi</span>
+      </a>
       <div class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a class="chip" href="#work">Work</a>
+        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#skills">Skills</a>
+        <a class="chip" href="#contact">Contact</a>
       </div>
     </div>
 
     <div class="hero">
-      <div class="panel hero-left">
-        <div class="kicker">Open to: <b>Data / Research / Ops / Policy Analytics</b></div>
-        <h1>Data Research Analyst</h1>
-        <div class="title">Policy & Operations Analytics • Systems & QA Validation • Data Quality</div>
+      <div class="card heroMain">
+        <div class="kicker">
+          <div class="pill">Data Research Analyst</div>
+          <div class="pill">Policy & Ops Analytics</div>
+          <div class="pill">Systems & QA Validation</div>
+        </div>
 
-        <p class="summary">
-          I translate messy real-world signals into clear decisions — combining statistical thinking, data validation,
-          and cross-functional communication. Experience supporting large-scale workflows in technology environments
-          (Google and Meta via Accenture/Qualitest).
+        <h1>Turning messy reality into decisions you can ship.</h1>
+
+        <p class="subtitle">
+          I’m a Data Research Analyst with a Master’s in Statistics & Data Science, working across
+          large-scale workflows in fast-moving tech environments (Google via Accenture, Meta via Qualitest).
+          I connect the dots between data quality, system behavior, and policy/ops impact — so teams can
+          make decisions with confidence.
         </p>
 
-        <div class="cta">
-          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
-          <a class="btn" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#projects">View Projects</a>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#projects">View featured projects →</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+
+        <div class="badgeRow" style="margin-top:14px;">
+          <span class="badge">SQL • Python • R</span>
+          <span class="badge">Dashboards & Reporting</span>
+          <span class="badge">QA / Validation</span>
+          <span class="badge">Cross-functional collaboration</span>
         </div>
       </div>
 
-      <div class="panel hero-right">
+      <div class="card heroSide">
         <div class="photo">
-          <div class="avatar">
-            <img src="assets/headshot.jpg" alt="Headshot of Laila Azizi" onerror="this.remove(); this.parentElement.textContent='Add headshot';" />
-          </div>
-          <div class="photo-meta">
-            <p class="name">Laila Azizi</p>
-            <p class="loc">Fremont, CA • Hybrid / Remote</p>
-          </div>
+          <img src="assets/headshot.jpg" alt="Laila Azizi headshot">
         </div>
-
-        <div class="quick">
-          <div class="stat">
-            <div class="label">Focus</div>
-            <div class="value">Data Quality + Validation</div>
-          </div>
-          <div class="stat">
-            <div class="label">Strength</div>
-            <div class="value">Clear stakeholder writing</div>
-          </div>
-          <div class="stat">
-            <div class="label">Tooling</div>
-            <div class="value">Python • SQL • R</div>
-          </div>
-          <div class="stat">
-            <div class="label">Domains</div>
-            <div class="value">Ops • Policy • QA</div>
-          </div>
+        <div class="mini">
+          <h3>Focus</h3>
+          <p>Operational clarity, trustworthy metrics, and documentation that makes decisions easy.</p>
+        </div>
+        <div class="mini">
+          <h3>Based in</h3>
+          <p>Fremont, CA • Open to remote / hybrid roles</p>
         </div>
       </div>
     </div>
 
-    <div class="panel section" id="projects">
-      <h2>Selected Projects</h2>
-      <p>Each project is written like a mini research abstract: problem → approach → outcome. That’s what recruiters actually scan for.</p>
-
-      <div class="grid">
-        <div class="card">
-          <div class="meta">
-            <span class="pill">NLP / Policy</span>
-            <span class="pill">EDA</span>
-            <span class="pill">Insights</span>
-          </div>
-          <h3>Detecting & Analyzing Harmful Content on a Social Media Platform</h3>
-
-          <div class="proj-img">
-            <img src="assets/project-harmful-content.jpg" alt="Project preview" onerror="this.remove(); this.parentElement.textContent='Add project image: assets/project-harmful-content.jpg';" />
-          </div>
-
-          <div class="kv">
-            <div><b>Problem:</b> Understand patterns in flagged content across regions and policy categories.</div>
-            <div><b>Approach:</b> Structured labeling + exploratory analysis + visualization to surface trends and high-risk clusters.</div>
-            <div><b>Outcome:</b> Clear, policy-style insights that non-technical stakeholders can act on.</div>
-          </div>
-
-          <div class="actions">
-            <a class="btn" href="#" target="_blank" rel="noopener">Report</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Notebook</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="meta">
-            <span class="pill">Forecasting</span>
-            <span class="pill">Modeling</span>
-            <span class="pill">Evaluation</span>
-          </div>
-          <h3>Predictive Analytics & Data Modeling (Forecasting / Regression / Classification)</h3>
-
-          <div class="proj-img">
-            <img src="assets/project-modeling.jpg" alt="Project preview" onerror="this.remove(); this.parentElement.textContent='Add project image: assets/project-modeling.jpg';" />
-          </div>
-
-          <div class="kv">
-            <div><b>Problem:</b> Build reliable models from real-world, messy data.</div>
-            <div><b>Approach:</b> Feature checks, baseline models, evaluation, and interpretability focus.</div>
-            <div><b>Outcome:</b> Practical predictions + explainable findings, emphasizing data quality and trust.</div>
-          </div>
-
-          <div class="actions">
-            <a class="btn" href="#" target="_blank" rel="noopener">Case Study</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Notebook</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
+    <div id="work" class="card" style="margin-top:18px;">
+      <div class="sectionTitle">
+        <h2>Work Experience</h2>
+        <span>impact-oriented highlights</span>
       </div>
-    </div>
-
-    <div class="panel section" id="experience">
-      <h2>Work Experience</h2>
-      <p>Short, impact-focused bullets. No fluff. No “task dumping.”</p>
-
-      <div class="timeline">
-        <div class="role">
-          <div class="top">
-            <b>Data Research / Systems Analyst — Google (via Accenture)</b>
-            <span>Mountain View, CA</span>
-          </div>
+      <div class="cards">
+        <div class="item">
+          <h3>Data Research / Systems Analyst — Google (via Accenture)</h3>
+          <p class="meta">Systems validation • data quality workflows • operational analytics</p>
           <ul>
-            <li>Supported system validation and data quality workflows across internal platforms.</li>
-            <li>Analyzed logs, datasets, and test results to support operational and engineering decisions.</li>
-            <li>Collaborated cross-functionally to improve reliability, accuracy, and triage efficiency.</li>
+            <li>Supported validation and data quality workflows across internal platforms.</li>
+            <li>Analyzed logs, datasets, and test results to inform ops + engineering decisions.</li>
+            <li>Partnered cross-functionally to improve reliability, accuracy, and process clarity.</li>
           </ul>
+          <div class="badgeRow">
+            <span class="badge">Validation</span><span class="badge">Debugging</span><span class="badge">Reporting</span>
+          </div>
         </div>
 
-        <div class="role">
-          <div class="top">
-            <b>Data Research Analyst — Meta (via Qualitest)</b>
-            <span>Bay Area, CA</span>
-          </div>
+        <div class="item">
+          <h3>Data Research Analyst — Meta (via Qualitest)</h3>
+          <p class="meta">data collection/validation • review workflows • research support</p>
           <ul>
-            <li>Contributed to data collection, validation, and review workflows supporting research initiatives.</li>
-            <li>Improved dataset consistency across structured and unstructured inputs.</li>
+            <li>Contributed to structured + unstructured data review workflows supporting research.</li>
+            <li>Improved consistency and accuracy through careful validation and documentation.</li>
             <li>Worked with cross-functional teams to support research and operational goals.</li>
           </ul>
+          <div class="badgeRow">
+            <span class="badge">Data QA</span><span class="badge">Process</span><span class="badge">Ops</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="panel section" id="skills">
-      <h2>Skills</h2>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">R</span>
-        <span class="tag">Statistical Analysis</span>
-        <span class="tag">Data Quality</span>
-        <span class="tag">Validation / QA</span>
-        <span class="tag">EDA & Visualization</span>
-        <span class="tag">Documentation</span>
-        <span class="tag">Cross-functional Collaboration</span>
-        <span class="tag">Policy-style Insights</span>
+    <div id="projects" class="card" style="margin-top:18px;">
+      <div class="sectionTitle">
+        <h2>Featured Projects</h2>
+        <span>add links as you publish them</span>
+      </div>
+      <div class="cards">
+        <div class="item">
+          <h3>Detecting & Analyzing Harmful Content (Simulated Policy + Data Project)</h3>
+          <p class="meta">NLP concepts • analytics • policy-style insights</p>
+          <ul>
+            <li>Analyzed simulated moderation datasets across regions and policy categories.</li>
+            <li>Built visual summaries to spot trends, risk clusters, and operational patterns.</li>
+            <li>Translated results into non-technical, policy-style recommendations.</li>
+          </ul>
+          <div class="badgeRow">
+            <span class="badge">Text + data</span><span class="badge">EDA</span><span class="badge">Storytelling</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Predictive Analytics & Modeling (Mixed Portfolio)</h3>
+          <p class="meta">forecasting • classification • regression • evaluation</p>
+          <ul>
+            <li>Built statistical + ML models for forecasting, classification, and regression.</li>
+            <li>Focused on model evaluation, interpretability, and data quality.</li>
+            <li>Applied analysis to real-world style operational and behavioral metrics.</li>
+          </ul>
+          <div class="badgeRow">
+            <span class="badge">Modeling</span><span class="badge">Metrics</span><span class="badge">Validation</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="panel section" id="contact">
-      <h2>Contact</h2>
-      <p style="margin-top:10px">
-        <b>Email:</b> your-email@example.com<br/>
-        <b>LinkedIn:</b> https://www.linkedin.com/in/your-linkedin<br/>
-        <b>GitHub:</b> https://github.com/LailaAzizi
-      </p>
+    <div id="skills" class="card" style="margin-top:18px;">
+      <div class="sectionTitle">
+        <h2>Skills</h2>
+        <span>what recruiters scan for</span>
+      </div>
+      <div class="cards">
+        <div class="item">
+          <h3>Analytics</h3>
+          <ul>
+            <li>SQL, Python, R</li>
+            <li>Exploratory analysis, dashboards, reporting</li>
+            <li>Experimental thinking + metric design</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Systems / Ops</h3>
+          <ul>
+            <li>Data quality, QA, system validation</li>
+            <li>Log-based investigation + issue triage</li>
+            <li>Clear documentation for cross-functional teams</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="footer">
-      <div>© <span id="y"></span> Laila Azizi</div>
-      <div>Built on GitHub Pages • Fast • Simple • Recruiter-friendly</div>
+    <div id="contact" class="card" style="margin-top:18px;">
+      <div class="sectionTitle">
+        <h2>Contact</h2>
+        <span>replace placeholders with your real links</span>
+      </div>
+      <div class="section">
+        <div class="badgeRow">
+          <span class="badge">Email: your-email@example.com</span>
+          <span class="badge">LinkedIn: linkedin.com/in/your-linkedin</span>
+          <span class="badge">GitHub: github.com/LailaAzizi</span>
+        </div>
+      </div>
+      <div class="footer">
+        <div>© <span id="y"></span> Laila Azizi</div>
+        <div class="smallLinks">
+          <a href="#projects">Projects</a> · <a href="#work">Work</a> · <a href="#skills">Skills</a>
+        </div>
+      </div>
     </div>
 
   </div>
