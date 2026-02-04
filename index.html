@@ -3,422 +3,431 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Laila Azizi — Data Research Analyst</title>
-  <meta name="description" content="Laila Azizi — Data Research Analyst (Data Quality, Ops Analytics, QA Validation). Portfolio, resume, projects, certificates." />
+  <title>Laila Azizi | Data Research Analyst</title>
+  <meta name="description" content="Laila Azizi — Data Research Analyst focused on data quality, systems validation, and stakeholder-ready insights." />
+
+  <!-- Modern font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --bg: #f6f8ff;
-      --bg2:#eef2ff;
-      --card:#ffffffcc;
-      --card2:#ffffffef;
-      --text:#0f172a;
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.60);
+      --text: #0f172a;
       --muted:#475569;
-      --line:#e2e8f0;
-      --accent:#4f46e5;
-      --accent2:#22c55e;
+      --border: rgba(15,23,42,.10);
       --shadow: 0 18px 45px rgba(15,23,42,.12);
       --shadow2: 0 10px 25px rgba(15,23,42,.10);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1080px;
+      --accent:#4f46e5;
+      --accent2:#7c3aed;
+      --ring: rgba(79,70,229,.20);
     }
 
     *{ box-sizing:border-box; }
-    html,body{ height:100%; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1100px 600px at 20% 10%, #dbeafe 0%, transparent 55%),
-        radial-gradient(900px 500px at 80% 20%, #e9d5ff 0%, transparent 55%),
-        radial-gradient(900px 600px at 35% 95%, #dcfce7 0%, transparent 55%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-      overflow-x:hidden;
+        radial-gradient(900px 500px at 15% 10%, rgba(79,70,229,.18), transparent 60%),
+        radial-gradient(800px 500px at 85% 20%, rgba(124,58,237,.16), transparent 60%),
+        radial-gradient(700px 500px at 55% 85%, rgba(59,130,246,.14), transparent 60%),
+        var(--bg);
     }
 
     a{ color:inherit; text-decoration:none; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 80px; }
+    .wrap{ max-width:1100px; margin:0 auto; padding:28px 18px 70px; }
 
-    /* Top Nav */
+    /* Top bar */
     .topbar{
       position: sticky;
-      top: 14px;
+      top: 10px;
       z-index: 50;
       display:flex;
-      justify-content:center;
-      pointer-events:none;
-    }
-    .nav{
-      pointer-events:auto;
-      display:flex;
-      gap:10px;
       align-items:center;
-      padding:10px;
-      border:1px solid var(--line);
-      background: var(--card);
-      backdrop-filter: blur(10px);
-      border-radius: 999px;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
       box-shadow: var(--shadow2);
-      transform: translateZ(0);
     }
     .brand{
-      display:flex; align-items:center; gap:10px;
-      padding:8px 12px;
-      border-radius:999px;
-      margin-right:6px;
+      display:flex; align-items:center; gap:10px; min-width: 220px;
+      font-weight:800; letter-spacing:-.02em;
     }
-    .dot{
-      width:10px;height:10px;border-radius:99px;
-      background: linear-gradient(135deg, var(--accent), #06b6d4);
-      box-shadow: 0 10px 18px rgba(79,70,229,.25);
-    }
-    .brand span{ font-weight:700; letter-spacing:.2px; }
+    .dot{ width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 0 0 6px var(--ring); }
 
+    .nav{
+      display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;
+    }
     .nav a{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
       padding:10px 12px;
-      border-radius:999px;
+      border-radius: 999px;
       border:1px solid transparent;
       color: var(--muted);
       font-weight:600;
-      font-size: 14px;
-      transition: .18s ease;
-      transform: translateZ(0);
+      font-size:14px;
     }
     .nav a:hover{
-      background:#ffffff;
-      border-color: var(--line);
+      background: rgba(79,70,229,.08);
+      border-color: rgba(79,70,229,.18);
       color: var(--text);
-      transform: translateY(-1px);
-      box-shadow: 0 10px 18px rgba(15,23,42,.08);
     }
     .nav a.active{
-      background: linear-gradient(135deg, rgba(79,70,229,.14), rgba(34,197,94,.10));
-      border-color: rgba(79,70,229,.25);
+      background: linear-gradient(135deg, rgba(79,70,229,.14), rgba(124,58,237,.10));
+      border-color: rgba(79,70,229,.22);
       color: var(--text);
     }
 
-    /* Hero */
+    /* Layout blocks */
     .hero{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      margin-top: 22px;
-      align-items: stretch;
-    }
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
+      grid-template-columns: 1.6fr 1fr;
+      gap:16px;
+      margin-top:18px;
     }
 
     .card{
-      border:1px solid var(--line);
-      background: var(--card2);
-      border-radius: var(--radius2);
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: 22px;
       box-shadow: var(--shadow);
+      overflow:hidden;
     }
-    .card.pad{ padding: 22px; }
+    .card.pad{ padding:22px; }
 
-    .pillrow{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+    .pillrow{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
     .pill{
-      font-size: 12px;
-      font-weight: 700;
-      color:#1f2937;
+      font-size:12px; font-weight:700;
+      color:#1f2a44;
       padding:7px 10px;
-      border-radius:999px;
-      background: linear-gradient(135deg, rgba(79,70,229,.12), rgba(6,182,212,.10));
-      border:1px solid rgba(79,70,229,.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.70);
+      border:1px solid rgba(15,23,42,.10);
     }
 
     h1{
-      margin: 0 0 10px;
-      font-size: 42px;
-      line-height: 1.05;
-      letter-spacing: -0.9px;
+      margin:0 0 10px;
+      font-size: 44px;
+      line-height:1.03;
+      letter-spacing:-.04em;
     }
     .sub{
       margin:0;
+      font-size:16px;
+      line-height:1.65;
       color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.6;
-      max-width: 62ch;
+      max-width: 58ch;
     }
 
-    .btnrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px; }
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
     .btn{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding: 11px 14px;
+      padding:12px 14px;
       border-radius: 14px;
-      border:1px solid var(--line);
-      background:#fff;
-      font-weight: 800;
-      font-size: 14px;
-      transition:.18s ease;
-      box-shadow: 0 10px 18px rgba(15,23,42,.08);
-      transform: translateZ(0);
+      border: 1px solid rgba(15,23,42,.10);
+      background: rgba(255,255,255,.85);
+      font-weight:700;
+      color: var(--text);
+      box-shadow: 0 10px 20px rgba(15,23,42,.06);
     }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 18px 30px rgba(15,23,42,.12); }
+    .btn:hover{ transform: translateY(-1px); transition: .18s ease; }
     .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
       color:white;
       border-color: transparent;
-      background: linear-gradient(135deg, var(--accent), #06b6d4);
+      box-shadow: 0 18px 30px rgba(79,70,229,.22);
     }
 
-    .right{
-      display:flex; flex-direction:column; gap:14px;
-      padding:18px;
-    }
-    .profile{
-      display:flex; align-items:center; gap:12px;
+    /* Profile card */
+    .profileTop{
+      display:flex; gap:14px; align-items:center;
+      padding:18px 18px 12px;
     }
     .avatar{
-      width:78px; height:78px; border-radius: 18px;
-      border:1px solid var(--line);
-      overflow:hidden;
+      width:62px; height:62px; border-radius: 18px; overflow:hidden;
+      border:1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.6);
       box-shadow: 0 14px 24px rgba(15,23,42,.12);
+      flex: 0 0 auto;
     }
-    .avatar img{ width:100%; height:100%; object-fit:cover; }
-    .name{ font-weight:900; }
-    .loc{ color:var(--muted); font-size: 13px; margin-top:2px; }
+    .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .who{ display:flex; flex-direction:column; gap:2px; }
+    .who .name{ font-weight:800; letter-spacing:-.02em; }
+    .who .meta{ color:var(--muted); font-weight:600; font-size:13px; }
 
-    .mini{
+    .grid2{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:10px;
+      gap:12px;
+      padding: 0 18px 18px;
     }
-    .mini .chip{
-      padding:12px;
-      border-radius: 16px;
-      border:1px solid var(--line);
-      background: #fff;
-      box-shadow: 0 10px 18px rgba(15,23,42,.06);
+    .mini{
+      background: var(--card2);
+      border:1px solid var(--border);
+      border-radius: 18px;
+      padding:12px 12px;
     }
-    .chip b{ display:block; font-size:12px; color: var(--muted); margin-bottom:6px; }
-    .chip span{ font-weight:900; font-size:14px; }
+    .mini .t{ font-size:12px; font-weight:800; color:#1f2a44; margin-bottom:6px; }
+    .mini .d{ font-size:13px; color: var(--muted); line-height:1.45; }
 
     /* Sections */
-    section{ scroll-margin-top: 92px; margin-top: 18px; }
-    .secHead{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:12px;
-      padding: 18px 4px 10px;
+    section{ margin-top:18px; }
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      padding:0 6px;
+      margin: 24px 0 10px;
     }
-    .secHead h2{
+    .sectionTitle h2{
       margin:0;
-      font-size: 22px;
-      letter-spacing: -.3px;
+      font-size:18px;
+      letter-spacing:-.02em;
     }
-    .secHead p{ margin:0; color:var(--muted); font-size: 13px; }
-
-    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
-    @media (max-width: 900px){ .grid2{ grid-template-columns: 1fr; } }
-
-    .panel{
-      padding:18px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background:#fff;
-      box-shadow: 0 12px 22px rgba(15,23,42,.08);
-      transition: .18s ease;
-      transform: translateZ(0);
+    .sectionTitle span{
+      color: var(--muted);
+      font-size:13px;
+      font-weight:600;
     }
-    .panel:hover{ transform: translateY(-2px); box-shadow: 0 18px 34px rgba(15,23,42,.12); }
 
-    .role{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
-    .role h3{ margin:0; font-size: 16px; }
-    .role small{ color: var(--muted); font-weight:700; }
-    ul{ margin:10px 0 0 18px; color: var(--muted); line-height:1.6; }
-
-    /* Project cards */
-    .projTitle{ margin:0; font-size:16px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .cardsRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .bullets{ margin:12px 0 0; padding-left:18px; color: var(--muted); line-height:1.6; }
+    .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
     .tag{
-      font-size: 12px;
-      font-weight: 800;
-      padding:6px 9px;
+      font-size:12px;
+      padding:7px 10px;
       border-radius: 999px;
-      border:1px solid var(--line);
-      background: #f8fafc;
-      color:#0f172a;
+      border:1px solid rgba(15,23,42,.10);
+      background: rgba(255,255,255,.78);
+      color:#1f2a44;
+      font-weight:700;
     }
-    .links{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
-    .link{
-      font-weight:900;
-      font-size: 13px;
-      padding:9px 12px;
-      border-radius: 12px;
-      border:1px solid var(--line);
-      background:#fff;
-      transition:.18s ease;
-    }
-    .link:hover{ transform: translateY(-1px); box-shadow: 0 12px 18px rgba(15,23,42,.08); }
 
     /* Certificates */
-    .certGrid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; }
-    @media (max-width: 950px){ .certGrid{ grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 650px){ .certGrid{ grid-template-columns: 1fr; } }
-
+    .certGrid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
     .cert{
-      position: relative;
-      overflow:hidden;
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background:#fff;
-      box-shadow: 0 12px 22px rgba(15,23,42,.08);
-      transition:.18s ease;
       cursor:pointer;
-    }
-    .cert:hover{ transform: translateY(-2px); box-shadow: 0 18px 34px rgba(15,23,42,.12); }
-    .cert h4{ margin:0 0 6px; font-size: 15px; }
-    .cert p{ margin:0; color:var(--muted); font-size: 13px; line-height:1.45; }
-
-    .preview{
-      position:absolute;
-      inset:auto 14px 14px 14px;
-      height: 0;
-      opacity: 0;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background:#f8fafc;
+      background: rgba(255,255,255,.80);
+      border:1px solid var(--border);
+      border-radius: 18px;
       overflow:hidden;
-      transition: .2s ease;
-      box-shadow: 0 20px 40px rgba(15,23,42,.18);
+      box-shadow: 0 10px 22px rgba(15,23,42,.08);
+      transition: transform .18s ease, box-shadow .18s ease;
     }
-    .cert:hover .preview{
-      height: 190px;
-      opacity: 1;
+    .cert:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px rgba(15,23,42,.14);
     }
-    .preview img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .cert img{
+      width:100%;
+      height:140px;
+      object-fit:cover;
+      display:block;
+    }
+    .cert .cap{
+      padding:10px 12px;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:-.01em;
+    }
+    .cert .cap small{
+      display:block;
+      font-weight:600;
+      color: var(--muted);
+      margin-top:3px;
+      letter-spacing:0;
+    }
+
+    /* Contact */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap:16px;
+    }
+    .field{
+      display:flex; gap:10px; align-items:center;
+      padding:12px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(15,23,42,.10);
+      background: rgba(255,255,255,.78);
+      font-weight:700;
+      color: var(--muted);
+    }
+    .field a{ color: var(--text); font-weight:800; }
+
+    footer{
+      margin-top:28px;
+      text-align:center;
+      color: var(--muted);
+      font-size:12px;
+    }
 
     /* Modal */
     .modal{
-      position: fixed;
-      inset: 0;
+      position:fixed;
+      inset:0;
       display:none;
-      align-items:center;
-      justify-content:center;
-      background: rgba(15,23,42,.55);
-      z-index: 100;
-      padding: 22px;
+      place-items:center;
+      background: rgba(2,6,23,.55);
+      z-index: 200;
+      padding: 18px;
     }
-    .modal.open{ display:flex; }
-    .modalInner{
-      width:min(980px, 100%);
-      background:#fff;
-      border-radius: 22px;
-      border:1px solid var(--line);
-      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+    .modal.open{ display:grid; }
+    .modalCard{
+      width:min(980px, 98vw);
+      max-height: 90vh;
+      border-radius: 18px;
       overflow:hidden;
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow: 0 24px 70px rgba(0,0,0,.35);
+      background: white;
+      position:relative;
     }
     .modalTop{
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      padding: 12px 14px;
-      border-bottom:1px solid var(--line);
-      background: #f8fafc;
+      justify-content:space-between;
+      padding:12px 14px;
+      border-bottom: 1px solid rgba(15,23,42,.10);
+      background: rgba(255,255,255,.92);
     }
-    .modalTop b{ font-size: 14px; }
-    .x{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius: 12px;
-      padding:8px 10px;
-      font-weight:900;
+    .modalTop .title{ font-weight:900; }
+    .close{
       cursor:pointer;
+      border:none;
+      background: rgba(15,23,42,.06);
+      padding:8px 10px;
+      border-radius: 12px;
+      font-weight:900;
     }
     .modalBody{
-      max-height: 78vh;
       overflow:auto;
-      background:#fff;
+      max-height: calc(90vh - 52px);
+      background: #0b1020;
+      padding: 10px;
     }
-    .modalBody img{ width:100%; display:block; }
+    .modalBody img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 12px;
+      background:white;
+    }
 
-    /* Footer */
-    footer{
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align:center;
-      padding: 22px 0 10px;
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero{ grid-template-columns: 1fr; }
+      .cardsRow{ grid-template-columns: 1fr; }
+      .certGrid{ grid-template-columns: repeat(2, 1fr); }
+      .contactGrid{ grid-template-columns: 1fr; }
+      h1{ font-size: 38px; }
+      .brand{ min-width:auto; }
+    }
+    @media (max-width: 520px){
+      .certGrid{ grid-template-columns: 1fr; }
+      h1{ font-size: 34px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Sticky top nav -->
-  <div class="topbar">
-    <div class="nav" id="nav">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="dot"></span><span>Laila Azizi</span>
-      </a>
-      <a href="#education">Education</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Laila Azizi</span>
+      </div>
 
-  <div class="wrap" id="top">
+      <nav class="nav" id="nav">
+        <a href="#education">Education</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
     <!-- HERO -->
     <div class="hero">
       <div class="card pad">
         <div class="pillrow">
           <span class="pill">Data Research Analyst</span>
-          <span class="pill">Ops Analytics</span>
-          <span class="pill">Data Quality</span>
-          <span class="pill">QA / Validation</span>
+          <span class="pill">Policy & Ops Analytics</span>
+          <span class="pill">Systems & QA Validation</span>
         </div>
 
         <h1>Turning messy reality into decisions you can ship.</h1>
         <p class="sub">
-          I work at the intersection of data quality, operational analytics, and systems validation — turning logs, datasets,
-          and noisy workflows into clear insights and reliable outcomes.
+          I connect the dots between <b>data quality</b>, <b>system behavior</b>, and <b>operational impact</b>.
+          I’m known for clear documentation, trustworthy metrics, and stakeholder-ready insights.
         </p>
 
-        <div class="btnrow">
-          <a class="btn primary" href="assets/Laila_Azizi_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#projects">View Projects</a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">Data Quality</span>
+          <span class="tag">Validation / QA</span>
+          <span class="tag">Stakeholder Writing</span>
         </div>
       </div>
 
-      <div class="card right">
-        <div class="profile">
+      <div class="card">
+        <div class="profileTop">
           <div class="avatar">
-            <img src="assets/headshot.jpg" alt="Laila Azizi headshot" />
+            <img src="assets/headshot.jpg" alt="Laila Azizi headshot">
           </div>
-          <div>
+          <div class="who">
             <div class="name">Laila Azizi</div>
-            <div class="loc">Fremont, CA • Open to hybrid/remote</div>
+            <div class="meta">Fremont, CA • Open to Hybrid / Remote</div>
           </div>
         </div>
 
-        <div class="mini">
-          <div class="chip">
-            <b>Focus</b>
-            <span>Ops clarity + trustworthy metrics</span>
+        <div class="grid2">
+          <div class="mini">
+            <div class="t">Focus</div>
+            <div class="d">Operational clarity, trustworthy metrics, documentation that makes decisions easy.</div>
           </div>
-          <div class="chip">
-            <b>Strength</b>
-            <span>Cross-functional communication</span>
+          <div class="mini">
+            <div class="t">Strength</div>
+            <div class="d">Turning logs + datasets into stakeholder-ready insights.</div>
           </div>
-          <div class="chip">
-            <b>Tooling</b>
-            <span>SQL • Python • R</span>
+          <div class="mini">
+            <div class="t">Tooling</div>
+            <div class="d">Python • SQL • R • Excel</div>
           </div>
-          <div class="chip">
-            <b>Domains</b>
-            <span>Data Quality • QA • Policy</span>
+          <div class="mini">
+            <div class="t">Domains</div>
+            <div class="d">Ops • Policy • QA • Data Quality</div>
           </div>
         </div>
       </div>
@@ -426,284 +435,254 @@
 
     <!-- EDUCATION -->
     <section id="education">
-      <div class="secHead">
+      <div class="sectionTitle">
         <h2>Education</h2>
-        <p>Degrees + programs recruiters scan first</p>
+        <span>What I studied</span>
       </div>
-
-      <div class="grid2">
-        <div class="panel">
-          <div class="role">
-            <h3>Master’s — Statistics & Data Science</h3>
-            <small>GPA ~ 3.88</small>
-          </div>
-          <ul>
-            <li>Applied statistics, analytics, modeling, and evaluation.</li>
-            <li>NLP coursework + projects.</li>
-          </ul>
+      <div class="cardsRow">
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">M.S. — Statistics & Data Science</h3>
+          <div style="color:var(--muted); font-weight:700;">Coursework: NLP, statistical modeling, experimentation, data analysis</div>
         </div>
-
-        <div class="panel">
-          <div class="role">
-            <h3>Bachelor’s — Computer Science (Software Engineering)</h3>
-            <small></small>
-          </div>
-          <ul>
-            <li>Programming foundations, systems thinking, and software development basics.</li>
-          </ul>
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">B.S. — Computer Science (Software Engineering)</h3>
+          <div style="color:var(--muted); font-weight:700;">Focus: software fundamentals, systems, problem solving</div>
         </div>
       </div>
     </section>
 
     <!-- WORK -->
     <section id="work">
-      <div class="secHead">
+      <div class="sectionTitle">
         <h2>Work Experience</h2>
-        <p>Clear, impact-focused, readable</p>
+        <span>Impact-focused highlights</span>
       </div>
-
-      <div class="grid2">
-        <div class="panel">
-          <div class="role">
-            <h3>Data Research / Systems Analyst — Google (via Accenture)</h3>
-            <small>Mountain View, CA</small>
-          </div>
-          <ul>
-            <li>Supported system validation and data-quality workflows across internal platforms.</li>
-            <li>Analyzed logs, datasets, and test results to support ops + engineering decisions.</li>
+      <div class="cardsRow">
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">Data Research / Systems Analyst — Google (via Accenture)</h3>
+          <div style="color:var(--muted); font-weight:700;">Mountain View, CA</div>
+          <ul class="bullets">
+            <li>Supported system validation + data quality workflows across internal platforms.</li>
+            <li>Analyzed logs, datasets, and test results to inform ops + engineering decisions.</li>
             <li>Partnered cross-functionally to improve reliability, accuracy, and process clarity.</li>
           </ul>
+          <div class="tags">
+            <span class="tag">Validation</span><span class="tag">Debugging</span><span class="tag">Reporting</span>
+          </div>
         </div>
 
-        <div class="panel">
-          <div class="role">
-            <h3>Data Research Analyst — Meta (via Qualitest)</h3>
-            <small>Bay Area, CA</small>
-          </div>
-          <ul>
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">Data Research Analyst — Meta (via Qualitest)</h3>
+          <div style="color:var(--muted); font-weight:700;">Bay Area, CA</div>
+          <ul class="bullets">
             <li>Contributed to structured + unstructured data review workflows supporting research.</li>
             <li>Improved consistency and accuracy through careful validation and documentation.</li>
             <li>Worked with cross-functional teams to support research and operational goals.</li>
           </ul>
-        </div>
-
-        <div class="panel">
-          <div class="role">
-            <h3>Data / Informatics Analyst — 113 Industries</h3>
-            <small>Internship / Contract</small>
+          <div class="tags">
+            <span class="tag">Data QA</span><span class="tag">Process</span><span class="tag">Ops</span>
           </div>
-          <ul>
-            <li>Supported data cleaning, analysis, and reporting for business/research needs.</li>
-            <li>Built structured summaries and insights for stakeholders (dashboards / exports).</li>
-            <li>Improved data consistency through validation checks and documentation.</li>
-          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="secHead">
-        <h2>Skills</h2>
-        <p>Grouped so it’s easy to scan</p>
-      </div>
-
-      <div class="grid2">
-        <div class="panel">
-          <div class="role">
-            <h3>Analytics</h3>
-            <small></small>
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">Data Analyst / Internship — 113 Industries</h3>
+          <div style="color:var(--muted); font-weight:700;">(Add city if you want)</div>
+          <ul class="bullets">
+            <li>Performed data cleaning, analysis, and reporting to support business decisions.</li>
+            <li>Built structured summaries and dashboards to communicate findings clearly.</li>
+            <li>Collaborated with stakeholders to define metrics and validate outputs.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Analytics</span><span class="tag">Dashboards</span><span class="tag">Stakeholders</span>
           </div>
-          <ul>
-            <li>SQL, Python, R</li>
-            <li>EDA, dashboards, reporting</li>
-            <li>Metric design + validation mindset</li>
-          </ul>
         </div>
 
-        <div class="panel">
-          <div class="role">
-            <h3>Systems / Ops</h3>
-            <small></small>
+        <div class="card pad">
+          <h3 style="margin:0 0 4px; letter-spacing:-.02em;">Availability</h3>
+          <div style="color:var(--muted); font-weight:700; line-height:1.6;">
+            Open to hybrid/remote roles in data research, operations analytics, validation/QA, and policy/ops analytics.
           </div>
-          <ul>
-            <li>Data quality, QA, system validation</li>
-            <li>Log-based investigation + issue triage</li>
-            <li>Clear documentation for cross-functional teams</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <div class="secHead">
-        <h2>Certificates</h2>
-        <p>Hover to preview • Click to open full size</p>
-      </div>
-
-      <div class="certGrid">
-        <div class="cert" data-title="MakeTechPurple — Project Management Cohort (Aug 2025)" data-img="assets/cert-maketechpurple-2025.png">
-          <h4>MakeTechPurple — Project Management Cohort</h4>
-          <p>August 2025 • Raakin Hossain</p>
-          <div class="preview"><img src="assets/cert-maketechpurple-2025.png" alt="Certificate preview"></div>
-        </div>
-
-        <div class="cert" data-title="Google Data Analytics Certificate" data-img="assets/cert-google-data-analytics.png">
-          <h4>Google Data Analytics</h4>
-          <p>Certificate • Preview on hover</p>
-          <div class="preview"><img src="assets/cert-google-data-analytics.png" alt="Certificate preview"></div>
-        </div>
-
-        <div class="cert" data-title="Java Certificate" data-img="assets/cert-java.png">
-          <h4>Java Certificate</h4>
-          <p>Certificate • Preview on hover</p>
-          <div class="preview"><img src="assets/cert-java.png" alt="Certificate preview"></div>
-        </div>
-
-        <div class="cert" data-title="Python Certificate" data-img="assets/cert-python.png">
-          <h4>Python Certificate</h4>
-          <p>Certificate • Preview on hover</p>
-          <div class="preview"><img src="assets/cert-python.png" alt="Certificate preview"></div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
-      <div class="secHead">
+      <div class="sectionTitle">
         <h2>Projects</h2>
-        <p>Short + strong (no “mixed portfolio” nonsense)</p>
+        <span>Two recruiter-friendly highlights</span>
       </div>
-
-      <div class="grid2">
-        <div class="panel">
-          <h3 class="projTitle">Detecting & Analyzing Harmful Content on a Social Media Platform</h3>
-          <ul>
-            <li>Simulated moderation dataset across regions and policy categories.</li>
-            <li>Built analysis to surface trends, high-risk clusters, and operational patterns.</li>
-            <li>Translated findings into policy-style insights for non-technical stakeholders.</li>
+      <div class="cardsRow">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px; letter-spacing:-.02em;">Detecting & Analyzing Harmful Content (Simulated Policy + Data)</h3>
+          <div style="color:var(--muted); font-weight:700;">NLP • EDA • Insights • Reporting</div>
+          <ul class="bullets">
+            <li>Explored flagged content patterns across regions and categories.</li>
+            <li>Built clear summaries to spot trends, risk clusters, and operational signals.</li>
+            <li>Translated findings into stakeholder-ready recommendations.</li>
           </ul>
           <div class="tags">
-            <span class="tag">NLP</span><span class="tag">Policy</span><span class="tag">EDA</span><span class="tag">Insights</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" title="Add your report link later">Report</a>
-            <a class="link" href="#" title="Add notebook link later">Notebook</a>
-            <a class="link" href="#" title="Add repo link later">Repo</a>
+            <span class="tag">Text + data</span><span class="tag">EDA</span><span class="tag">Storytelling</span>
           </div>
         </div>
 
-        <div class="panel">
-          <h3 class="projTitle">Predictive Analytics (Forecasting / Classification / Regression)</h3>
-          <ul>
-            <li>Built baseline models and improved performance with feature checks and evaluation.</li>
-            <li>Focused on interpretability + practical decisions, not “model flexing”.</li>
-            <li>Packaged results clearly (metrics + narrative + visuals).</li>
+        <div class="card pad">
+          <h3 style="margin:0 0 6px; letter-spacing:-.02em;">Predictive Analytics & Modeling</h3>
+          <div style="color:var(--muted); font-weight:700;">Forecasting • Classification • Regression</div>
+          <ul class="bullets">
+            <li>Built baseline models and focused on evaluation + interpretability.</li>
+            <li>Applied analysis to messy, real-world style datasets.</li>
+            <li>Emphasized data quality checks and practical decisions.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Modeling</span><span class="tag">Evaluation</span><span class="tag">Data Quality</span>
+            <span class="tag">Modeling</span><span class="tag">Metrics</span><span class="tag">Validation</span>
           </div>
-          <div class="links">
-            <a class="link" href="#" title="Add case study link later">Case Study</a>
-            <a class="link" href="#" title="Add notebook link later">Notebook</a>
-            <a class="link" href="#" title="Add repo link later">Repo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sectionTitle">
+        <h2>Skills</h2>
+        <span>What I use daily</span>
+      </div>
+      <div class="cardsRow">
+        <div class="card pad">
+          <h3 style="margin:0 0 8px; letter-spacing:-.02em;">Analytics</h3>
+          <div style="color:var(--muted); line-height:1.7; font-weight:700;">
+            SQL, Python, R • EDA • Dashboards & reporting • Metric design
           </div>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 8px; letter-spacing:-.02em;">Systems / Ops</h3>
+          <div style="color:var(--muted); line-height:1.7; font-weight:700;">
+            Data quality & validation • Log-based investigation • Documentation • Cross-functional coordination
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <div class="sectionTitle">
+        <h2>Certificates</h2>
+        <span>Click any certificate to preview</span>
+      </div>
+
+      <div class="certGrid">
+        <div class="cert" data-title="Google Data Analytics" data-img="assets/cert-google-data-analytics.png">
+          <img src="assets/cert-google-data-analytics.png" alt="Google Data Analytics Certificate">
+          <div class="cap">Google Data Analytics <small>Preview</small></div>
+        </div>
+
+        <div class="cert" data-title="Python Certificate" data-img="assets/cert-python.png">
+          <img src="assets/cert-python.png" alt="Python Certificate">
+          <div class="cap">Python <small>Preview</small></div>
+        </div>
+
+        <div class="cert" data-title="Java Certificate" data-img="assets/cert-java.png">
+          <img src="assets/cert-java.png" alt="Java Certificate">
+          <div class="cap">Java <small>Preview</small></div>
+        </div>
+
+        <div class="cert" data-title="MakeTechPurple PM Cohort (2025)" data-img="assets/cert-maketechpurple-2025.png">
+          <img src="assets/cert-maketechpurple-2025.png" alt="MakeTechPurple Certificate">
+          <div class="cap">MakeTechPurple (2025) <small>Preview</small></div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="secHead">
+      <div class="sectionTitle">
         <h2>Contact</h2>
-        <p>Clean + direct</p>
+        <span>Let’s connect</span>
       </div>
 
-      <div class="panel">
-        <ul>
-          <li><b>Email:</b> <a href="mailto:azizilaila03@gmail.com">azizilaila03@gmail.com</a></li>
-          <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">linkedin.com/in/lailaazizi</a></li>
-          <li><b>GitHub:</b> <a href="https://github.com/LailaAzizi" target="_blank" rel="noopener">github.com/LailaAzizi</a></li>
-        </ul>
+      <div class="contactGrid">
+        <div class="card pad">
+          <div class="field">Email: <a href="mailto:azizilaila03@gmail.com">azizilaila03@gmail.com</a></div>
+          <div style="height:10px"></div>
+          <div class="field">LinkedIn: <a href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">linkedin.com/in/lailaazizi</a></div>
+          <div style="height:10px"></div>
+          <div class="field">GitHub: <a href="https://github.com/LailaAzizi" target="_blank" rel="noopener">github.com/LailaAzizi</a></div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 8px; letter-spacing:-.02em;">Quick note</h3>
+          <div style="color:var(--muted); line-height:1.7; font-weight:700;">
+            I’m open to roles in data research, operations analytics, validation/QA, and policy/ops analytics.
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      © <span id="year"></span> Laila Azizi • Built on GitHub Pages
-    </footer>
+    <footer>© <span id="year"></span> Laila Azizi • Built on GitHub Pages</footer>
   </div>
 
-  <!-- Certificate Modal -->
+  <!-- Certificate modal -->
   <div class="modal" id="modal" aria-hidden="true">
-    <div class="modalInner">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-label="Certificate preview">
       <div class="modalTop">
-        <b id="modalTitle">Certificate</b>
-        <button class="x" id="closeBtn">Close</button>
+        <div class="title" id="modalTitle">Certificate</div>
+        <button class="close" id="closeBtn">Close</button>
       </div>
       <div class="modalBody">
-        <img id="modalImg" src="" alt="Certificate full view">
+        <img id="modalImg" src="" alt="Certificate preview">
       </div>
     </div>
   </div>
 
   <script>
-    // Smooth scroll for nav
-    document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const navLinks = Array.from(document.querySelectorAll("#nav a"));
+    const sections = navLinks
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+
+    const setActive = () => {
+      const y = window.scrollY + 120;
+      let current = sections[0]?.id || "";
+      for (const s of sections) {
+        if (s.offsetTop <= y) current = s.id;
+      }
+      navLinks.forEach(a => {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + current);
       });
-    });
-
-    // Active nav based on section in view
-    const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]')).filter(x=>x.getAttribute('href') !== '#top');
-    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
-    const setActive = (id) => {
-      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
     };
 
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          setActive(entry.target.id);
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0.01 });
-
-    sections.forEach(sec => obs.observe(sec));
-
-    // Certificates: click to open modal
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    const modalTitle = document.getElementById('modalTitle');
-    const closeBtn = document.getElementById('closeBtn');
-
-    document.querySelectorAll('.cert').forEach(card=>{
-      card.addEventListener('click', ()=>{
-        const img = card.getAttribute('data-img');
-        const title = card.getAttribute('data-title') || 'Certificate';
-        modalTitle.textContent = title;
-        modalImg.src = img;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-      });
+    window.addEventListener("scroll", setActive, { passive: true });
+    window.addEventListener("load", () => {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      setActive();
     });
 
-    const closeModal = ()=>{
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      modalImg.src = '';
-    };
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+    // Certificates modal
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const openModal = (title, img) => {
+      modalTitle.textContent = title;
+      modalImg.src = img;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      modalImg.src = "";
+    };
+
+    document.querySelectorAll(".cert").forEach(card => {
+      card.addEventListener("click", () => openModal(card.dataset.title, card.dataset.img));
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
   </script>
 </body>
 </html>
