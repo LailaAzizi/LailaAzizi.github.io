@@ -1,81 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Laila Azizi – Data Research Analyst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laila Azizi | Data Research Analyst</title>
+  <meta name="description" content="Portfolio of Laila Azizi — Data Research Analyst focused on policy & operations analytics, systems validation, and data quality." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#111936;
+      --card:#0f1733;
+      --text:#e8ecff;
+      --muted:#b9c1ffcc;
+      --line:#2a3566;
+      --accent:#7c5cff;
+      --accent2:#23c6ff;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 0%, rgba(35,198,255,.18), transparent 55%),
+                  linear-gradient(180deg, var(--bg), #070a14 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 28px 18px 80px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 10px 0 22px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(124,92,255,.12);
+    }
+    .nav{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{color:var(--muted); font-weight:600; font-size:14px}
+    .nav a:hover{color:var(--text)}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 20px;
+      align-items:stretch;
+      margin-top: 6px;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(17,25,54,.9), rgba(15,23,51,.78));
+      border: 1px solid rgba(42,53,102,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding: 26px 26px 22px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(42,53,102,.9);
+      background: rgba(8,12,26,.6);
+      color: var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .kicker b{color: var(--text)}
+    h1{
+      margin: 14px 0 8px;
+      font-size: 44px;
+      line-height: 1.1;
+      letter-spacing: -.6px;
+    }
+    .title{
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .summary{
+      margin: 0 0 18px;
+      color: #d9deff;
+      font-size: 16px;
+      max-width: 70ch;
+    }
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.55);
+      font-weight:800;
+      font-size: 14px;
+      color: var(--text);
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(124,92,255,.55)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(35,198,255,.85));
+      border-color: transparent;
+      color: #071022;
+      box-shadow: 0 14px 34px rgba(124,92,255,.25);
+    }
+    .btn.primary:hover{transform: translateY(-2px)}
+    .hero-right{
+      display:flex; flex-direction:column;
+      padding: 18px;
+      gap: 14px;
+    }
+    .photo{
+      border-radius: 16px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.55);
+      padding: 14px;
+      display:flex; gap:14px; align-items:center;
+    }
+    .avatar{
+      width:86px; height:86px;
+      border-radius: 18px;
+      border: 1px solid rgba(42,53,102,.95);
+      overflow:hidden;
+      background: rgba(17,25,54,.7);
+      flex: 0 0 auto;
+      display:grid; place-items:center;
+      color: var(--muted);
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+    .photo-meta{min-width:0}
+    .photo-meta .name{font-weight:900; font-size:16px; margin:0}
+    .photo-meta .loc{margin:4px 0 0; color: var(--muted); font-weight:650; font-size:13px}
+    .quick{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      flex:1;
+    }
+    .stat{
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.55);
+    }
+    .stat .label{color: var(--muted); font-weight:750; font-size:12px; text-transform:uppercase; letter-spacing:.9px}
+    .stat .value{margin: 8px 0 0; font-size: 14px; font-weight:850}
+    .section{
+      margin-top: 26px;
+      padding: 22px;
+    }
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    .section p{margin: 0; color: #d9deff}
+    .grid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .card{
+      grid-column: span 6;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.45);
+      box-shadow: 0 8px 26px rgba(0,0,0,.22);
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .meta{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px}
+    .pill{
+      font-size: 12px;
+      font-weight:800;
+      color: #0b1020;
+      background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(35,198,255,.8));
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .card p{margin: 0 0 10px; color: #d9deff}
+    .proj-img{
+      width:100%;
+      height: 170px;
+      border-radius: 14px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(17,25,54,.55);
+      overflow:hidden;
+      margin: 10px 0 12px;
+      display:grid; place-items:center;
+      color: var(--muted);
+      font-weight:800;
+      font-size: 13px;
+    }
+    .proj-img img{width:100%; height:100%; object-fit:cover; display:block}
+    .kv{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .kv div{
+      border-left: 3px solid rgba(124,92,255,.6);
+      padding-left: 10px;
+      color: #d9deff;
+      font-size: 13.5px;
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+    .actions a{font-size:13px}
+    .timeline{
+      margin-top: 12px;
+      display:grid; gap:12px;
+    }
+    .role{
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.45);
+    }
+    .role .top{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .role .top b{font-size:14px}
+    .role .top span{color: var(--muted); font-weight:700; font-size:13px}
+    .role ul{margin: 10px 0 0 18px; color:#d9deff}
+    .tags{display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px}
+    .tag{
+      border: 1px solid rgba(42,53,102,.95);
+      background: rgba(7,10,20,.55);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-weight:800;
+      font-size: 13px;
+      color: #d9deff;
+    }
+    .footer{
+      margin-top: 26px;
+      padding: 18px 22px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      color: var(--muted);
+      font-weight:650;
+      font-size: 13px;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns: 1fr}
+      .card{grid-column: span 12}
+      h1{font-size: 38px}
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 40px; line-height: 1.7; color: #222;">
+<body>
+  <div class="wrap">
 
-  <h1>Laila Azizi</h1>
-  <h3>Data Research Analyst | Policy & Operations Analytics | Systems & QA Validation</h3>
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Laila Azizi</div>
+      <div class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
 
-  <p>
-    I am a Data Research Analyst with a Master’s degree in Statistics & Data Science and experience
-    supporting large-scale data and system workflows in technology environments such as Google and Meta
-    (via Accenture and Qualitest).
-  </p>
+    <div class="hero">
+      <div class="panel hero-left">
+        <div class="kicker">Open to: <b>Data / Research / Ops / Policy Analytics</b></div>
+        <h1>Data Research Analyst</h1>
+        <div class="title">Policy & Operations Analytics • Systems & QA Validation • Data Quality</div>
 
-  <p>
-    My work focuses on analyzing structured and unstructured data, validating systems and outputs,
-    and translating technical findings into clear insights for engineering, operations, and policy stakeholders.
-  </p>
+        <p class="summary">
+          I translate messy real-world signals into clear decisions — combining statistical thinking, data validation,
+          and cross-functional communication. Experience supporting large-scale workflows in technology environments
+          (Google and Meta via Accenture/Qualitest).
+        </p>
 
-  <hr>
+        <div class="cta">
+          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </div>
 
-  <h2>Work Experience</h2>
+      <div class="panel hero-right">
+        <div class="photo">
+          <div class="avatar">
+            <img src="assets/headshot.jpg" alt="Headshot of Laila Azizi" onerror="this.remove(); this.parentElement.textContent='Add headshot';" />
+          </div>
+          <div class="photo-meta">
+            <p class="name">Laila Azizi</p>
+            <p class="loc">Fremont, CA • Hybrid / Remote</p>
+          </div>
+        </div>
 
-  <h4>Data Research / Systems Analyst — Google (via Accenture)</h4>
-  <ul>
-    <li>Supported system validation and data quality workflows across internal platforms</li>
-    <li>Analyzed logs, datasets, and test results to support operational and engineering decisions</li>
-    <li>Collaborated cross-functionally to improve system reliability and accuracy</li>
-  </ul>
+        <div class="quick">
+          <div class="stat">
+            <div class="label">Focus</div>
+            <div class="value">Data Quality + Validation</div>
+          </div>
+          <div class="stat">
+            <div class="label">Strength</div>
+            <div class="value">Clear stakeholder writing</div>
+          </div>
+          <div class="stat">
+            <div class="label">Tooling</div>
+            <div class="value">Python • SQL • R</div>
+          </div>
+          <div class="stat">
+            <div class="label">Domains</div>
+            <div class="value">Ops • Policy • QA</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <h4>Data Research Analyst — Meta (via Qualitest)</h4>
-  <ul>
-    <li>Contributed to data collection, validation, and review workflows supporting research initiatives</li>
-    <li>Ensured accuracy and consistency of structured and unstructured datasets</li>
-    <li>Worked closely with cross-functional teams to support research and operational goals</li>
-  </ul>
+    <div class="panel section" id="projects">
+      <h2>Selected Projects</h2>
+      <p>Each project is written like a mini research abstract: problem → approach → outcome. That’s what recruiters actually scan for.</p>
 
-  <hr>
+      <div class="grid">
+        <div class="card">
+          <div class="meta">
+            <span class="pill">NLP / Policy</span>
+            <span class="pill">EDA</span>
+            <span class="pill">Insights</span>
+          </div>
+          <h3>Detecting & Analyzing Harmful Content on a Social Media Platform</h3>
 
-  <h2>Selected Projects</h2>
+          <div class="proj-img">
+            <img src="assets/project-harmful-content.jpg" alt="Project preview" onerror="this.remove(); this.parentElement.textContent='Add project image: assets/project-harmful-content.jpg';" />
+          </div>
 
-  <h4>Detecting and Analyzing Harmful Content on a Social Media Platform</h4>
-  <ul>
-    <li>Analyzed simulated content moderation datasets across regions and policy categories</li>
-    <li>Performed exploratory data analysis and visualization to identify trends and high-risk patterns</li>
-    <li>Translated findings into policy-style insights for non-technical stakeholders</li>
-  </ul>
+          <div class="kv">
+            <div><b>Problem:</b> Understand patterns in flagged content across regions and policy categories.</div>
+            <div><b>Approach:</b> Structured labeling + exploratory analysis + visualization to surface trends and high-risk clusters.</div>
+            <div><b>Outcome:</b> Clear, policy-style insights that non-technical stakeholders can act on.</div>
+          </div>
 
-  <h4>Predictive Analytics & Data Modeling Projects</h4>
-  <ul>
-    <li>Built statistical and machine learning models for forecasting, classification, and regression tasks</li>
-    <li>Worked with real-world datasets involving customer behavior, operational metrics, and performance indicators</li>
-    <li>Focused on model evaluation, interpretability, and data quality</li>
-  </ul>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener">Report</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Notebook</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
 
-  <hr>
+        <div class="card">
+          <div class="meta">
+            <span class="pill">Forecasting</span>
+            <span class="pill">Modeling</span>
+            <span class="pill">Evaluation</span>
+          </div>
+          <h3>Predictive Analytics & Data Modeling (Forecasting / Regression / Classification)</h3>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, SQL, R</li>
-    <li>Statistical Analysis & Data Validation</li>
-    <li>Data Quality, QA & System Testing</li>
-    <li>Exploratory Data Analysis & Visualization</li>
-    <li>Cross-functional Documentation & Reporting</li>
-  </ul>
+          <div class="proj-img">
+            <img src="assets/project-modeling.jpg" alt="Project preview" onerror="this.remove(); this.parentElement.textContent='Add project image: assets/project-modeling.jpg';" />
+          </div>
 
-  <hr>
+          <div class="kv">
+            <div><b>Problem:</b> Build reliable models from real-world, messy data.</div>
+            <div><b>Approach:</b> Feature checks, baseline models, evaluation, and interpretability focus.</div>
+            <div><b>Outcome:</b> Practical predictions + explainable findings, emphasizing data quality and trust.</div>
+          </div>
 
-  <h2>Contact</h2>
-  <p>
-    Email: your-email@example.com<br>
-    LinkedIn: https://www.linkedin.com/in/your-linkedin
-  </p>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener">Case Study</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Notebook</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="panel section" id="experience">
+      <h2>Work Experience</h2>
+      <p>Short, impact-focused bullets. No fluff. No “task dumping.”</p>
+
+      <div class="timeline">
+        <div class="role">
+          <div class="top">
+            <b>Data Research / Systems Analyst — Google (via Accenture)</b>
+            <span>Mountain View, CA</span>
+          </div>
+          <ul>
+            <li>Supported system validation and data quality workflows across internal platforms.</li>
+            <li>Analyzed logs, datasets, and test results to support operational and engineering decisions.</li>
+            <li>Collaborated cross-functionally to improve reliability, accuracy, and triage efficiency.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="top">
+            <b>Data Research Analyst — Meta (via Qualitest)</b>
+            <span>Bay Area, CA</span>
+          </div>
+          <ul>
+            <li>Contributed to data collection, validation, and review workflows supporting research initiatives.</li>
+            <li>Improved dataset consistency across structured and unstructured inputs.</li>
+            <li>Worked with cross-functional teams to support research and operational goals.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel section" id="skills">
+      <h2>Skills</h2>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">R</span>
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">Data Quality</span>
+        <span class="tag">Validation / QA</span>
+        <span class="tag">EDA & Visualization</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Cross-functional Collaboration</span>
+        <span class="tag">Policy-style Insights</span>
+      </div>
+    </div>
+
+    <div class="panel section" id="contact">
+      <h2>Contact</h2>
+      <p style="margin-top:10px">
+        <b>Email:</b> your-email@example.com<br/>
+        <b>LinkedIn:</b> https://www.linkedin.com/in/your-linkedin<br/>
+        <b>GitHub:</b> https://github.com/LailaAzizi
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Laila Azizi</div>
+      <div>Built on GitHub Pages • Fast • Simple • Recruiter-friendly</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
