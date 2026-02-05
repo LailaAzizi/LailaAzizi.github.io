@@ -8,18 +8,18 @@
 
   <style>
     :root{
-      --bg0: #f6f8ff;
-      --bg1: #eef3ff;
-      --card: rgba(255,255,255,.78);
-      --card2: rgba(255,255,255,.92);
+      --bg0: #f7f9ff;
+      --bg1: #eef4ff;
+      --card: rgba(255,255,255,.82);
+      --card2: rgba(255,255,255,.94);
       --border: rgba(17, 24, 39, 0.10);
-      --text: #0f172a;
-      --muted: rgba(15,23,42,.72);
-      --muted2: rgba(15,23,42,.55);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --muted2: rgba(11,18,32,.55);
       --shadow: 0 22px 60px rgba(2,8,23,.10);
       --shadow2: 0 12px 28px rgba(2,8,23,.10);
-      --accent: #3b82f6;
-      --accent2:#8b5cf6;
+      --accent: #2563eb;
+      --accent2:#7c3aed;
       --radius: 22px;
     }
 
@@ -30,17 +30,17 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color: var(--text);
       background:
-        radial-gradient(900px 600px at 15% 0%, rgba(59,130,246,.14), transparent 55%),
-        radial-gradient(900px 600px at 85% 15%, rgba(139,92,246,.14), transparent 55%),
+        radial-gradient(1000px 700px at 12% 0%, rgba(37,99,235,.14), transparent 55%),
+        radial-gradient(1000px 700px at 88% 10%, rgba(124,58,237,.12), transparent 55%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
       min-height:100vh;
     }
 
     a{ color:inherit; text-decoration:none; }
     .wrap{
-      max-width: 1120px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 22px 16px 64px;
+      padding: 22px 16px 76px;
     }
 
     /* Topbar */
@@ -51,10 +51,10 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 12px;
-      padding: 12px 14px;
-      border: 1px solid rgba(232,236,255,.85);
-      background: rgba(255,255,255,.70);
+      gap: 14px;
+      padding: 14px 16px;
+      border: 1px solid rgba(232,236,255,.90);
+      background: rgba(255,255,255,.76);
       backdrop-filter: blur(14px);
       border-radius: 18px;
       box-shadow: var(--shadow2);
@@ -62,33 +62,35 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
-      min-width: 260px;
+      gap:12px;
+      min-width: 320px;
     }
     .dot{
-      width:10px;
-      height:10px;
+      width:12px;
+      height:12px;
       border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,0) 45%),
-                  linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 8px 18px rgba(59,130,246,.25);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,0) 45%),
+        linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 22px rgba(37,99,235,.20);
       flex: 0 0 auto;
     }
     .brand b{
-      font-size: 14.5px;
-      letter-spacing: .2px;
+      font-size: 15.5px;
+      letter-spacing: .15px;
     }
     .brand small{
       display:block;
-      margin-top:2px;
-      font-size: 12px;
+      margin-top:3px;
+      font-size: 13px;
       color: var(--muted2);
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1.25;
     }
 
     .nav{
       display:flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
@@ -96,93 +98,95 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding: 9px 12px;
+      padding: 10px 13px;
       border-radius: 999px;
       border: 1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.86);
+      background: rgba(255,255,255,.90);
       color: #111827;
-      font-weight: 800;
-      font-size: 13px;
+      font-weight: 900;
+      font-size: 13.5px;
       transition: transform .14s ease, box-shadow .14s ease, background .14s ease, border-color .14s ease;
       user-select:none;
+      white-space: nowrap;
     }
     .pill:hover{
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(2,8,23,.10);
-      background: rgba(255,255,255,.96);
-      border-color: rgba(59,130,246,.25);
+      box-shadow: 0 12px 26px rgba(2,8,23,.10);
+      background: rgba(255,255,255,.98);
+      border-color: rgba(37,99,235,.25);
     }
     .pill.active{
-      border-color: rgba(59,130,246,.35);
-      box-shadow: 0 14px 30px rgba(59,130,246,.12);
+      border-color: rgba(37,99,235,.35);
+      box-shadow: 0 16px 34px rgba(37,99,235,.12);
+      background: rgba(255,255,255,.98);
     }
 
     /* Layout */
     .grid{
       display:grid;
-      grid-template-columns: 1.35fr .85fr;
-      gap: 16px;
-      margin-top: 16px;
+      grid-template-columns: 1.38fr .82fr;
+      gap: 18px;
+      margin-top: 18px;
       align-items: stretch;
     }
 
     .card{
       border: 1px solid rgba(17,24,39,.09);
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.78);
       backdrop-filter: blur(16px);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .pad{ padding: 22px; }
+    .pad{ padding: 26px; }
 
     /* Hero */
     .hero h1{
       margin: 0;
-      font-size: 52px;
-      line-height: 1.02;
+      font-size: 54px;
+      line-height: 1.06;
       letter-spacing: -1.8px;
     }
     .hero p{
-      margin: 14px 0 0;
-      font-size: 16px;
-      line-height: 1.75;
+      margin: 16px 0 0;
+      font-size: 18px;
+      line-height: 1.85;
       color: var(--muted);
-      max-width: 70ch;
+      max-width: 74ch;
     }
 
     .cta{
       display:flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 18px;
+      margin-top: 22px;
       align-items:center;
     }
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding: 11px 14px;
+      padding: 12px 15px;
       border-radius: 14px;
       border: 1px solid rgba(17,24,39,.12);
-      background: rgba(255,255,255,.92);
-      font-weight: 900;
-      font-size: 14px;
+      background: rgba(255,255,255,.94);
+      font-weight: 950;
+      font-size: 14.5px;
       transition: transform .14s ease, box-shadow .14s ease, background .14s ease, border-color .14s ease;
-      box-shadow: 0 10px 22px rgba(2,8,23,.08);
+      box-shadow: 0 12px 26px rgba(2,8,23,.08);
     }
     .btn:hover{
       transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(2,8,23,.10);
-      border-color: rgba(59,130,246,.25);
+      box-shadow: 0 16px 34px rgba(2,8,23,.10);
+      border-color: rgba(37,99,235,.25);
     }
     .btn.primary{
       color: #fff;
-      border-color: rgba(59,130,246,.35);
-      background: linear-gradient(135deg, rgba(59,130,246,.96), rgba(139,92,246,.86));
-      box-shadow: 0 18px 40px rgba(59,130,246,.18);
+      border-color: rgba(37,99,235,.35);
+      background: linear-gradient(135deg, rgba(37,99,235,.98), rgba(124,58,237,.88));
+      box-shadow: 0 20px 46px rgba(37,99,235,.18);
     }
-    .btn.primary:hover{ box-shadow: 0 22px 50px rgba(59,130,246,.22); }
+    .btn.primary:hover{ box-shadow: 0 24px 56px rgba(37,99,235,.22); }
     .btn.link{
       background: transparent;
       border-color: rgba(17,24,39,.10);
@@ -192,32 +196,32 @@
     .chips{
       display:flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+      gap: 10px;
+      margin-top: 18px;
     }
     .chip{
-      font-size: 12.5px;
-      font-weight: 800;
-      color: rgba(15,23,42,.72);
-      padding: 8px 10px;
+      font-size: 13px;
+      font-weight: 900;
+      color: rgba(11,18,32,.70);
+      padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.86);
+      background: rgba(255,255,255,.92);
       border: 1px solid rgba(17,24,39,.08);
     }
 
     /* Profile card */
     .profile{
       display:flex;
-      gap: 14px;
+      gap: 16px;
       align-items:flex-start;
     }
     .avatar{
-      width: 120px;
-      height: 120px;
-      border-radius: 20px;
+      width: 140px;
+      height: 140px;
+      border-radius: 22px;
       overflow:hidden;
       flex: 0 0 auto;
-      box-shadow: 0 18px 44px rgba(2,8,23,.18);
+      box-shadow: 0 22px 54px rgba(2,8,23,.18);
       border: 1px solid rgba(17,24,39,.10);
       background:#fff;
     }
@@ -229,135 +233,138 @@
     }
     .profile h2{
       margin: 0;
-      font-size: 20px;
+      font-size: 22px;
       letter-spacing: -0.4px;
     }
     .profile .sub{
-      margin-top: 6px;
+      margin-top: 8px;
       color: var(--muted);
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 1.4;
+      font-weight: 750;
+      font-size: 14px;
+      line-height: 1.5;
     }
     .mini{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 14px;
+      gap: 12px;
+      margin-top: 18px;
     }
     .mini .box{
-      padding: 12px 12px;
-      border-radius: 16px;
+      padding: 14px 14px;
+      border-radius: 18px;
       border: 1px solid rgba(17,24,39,.08);
-      background: rgba(255,255,255,.84);
-      box-shadow: 0 10px 24px rgba(2,8,23,.06);
-      min-height: 82px;
+      background: rgba(255,255,255,.90);
+      box-shadow: 0 12px 26px rgba(2,8,23,.06);
+      min-height: 92px;
     }
     .mini b{
       display:block;
       font-size: 12px;
-      letter-spacing:.4px;
+      letter-spacing:.45px;
       text-transform: uppercase;
-      color: rgba(15,23,42,.58);
-      margin-bottom: 6px;
+      color: rgba(11,18,32,.52);
+      margin-bottom: 7px;
     }
     .mini span{
-      color: rgba(15,23,42,.80);
-      font-weight: 750;
-      font-size: 13px;
-      line-height: 1.45;
+      color: rgba(11,18,32,.82);
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 1.55;
       display:block;
     }
 
     /* Sections */
     section{
-      margin-top: 18px;
-      scroll-margin-top: 100px;
+      margin-top: 26px;
+      scroll-margin-top: 110px;
     }
     .sectionTitle{
       display:flex;
       align-items:baseline;
       justify-content:space-between;
       gap: 12px;
-      padding: 0 6px;
-      margin-bottom: 10px;
+      padding: 0 8px;
+      margin-bottom: 12px;
     }
     .sectionTitle h3{
       margin:0;
-      font-size: 22px;
-      letter-spacing: -0.6px;
+      font-size: 24px;
+      letter-spacing: -0.7px;
     }
     .sectionTitle p{
       margin:0;
       color: var(--muted2);
-      font-weight: 700;
-      font-size: 13px;
+      font-weight: 750;
+      font-size: 13.5px;
+      line-height: 1.4;
     }
 
     .cards{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 16px;
     }
     .item{
-      padding: 16px;
-      border-radius: 18px;
+      padding: 18px;
+      border-radius: 20px;
       border: 1px solid rgba(17,24,39,.08);
-      background: rgba(255,255,255,.84);
-      box-shadow: 0 12px 30px rgba(2,8,23,.07);
+      background: rgba(255,255,255,.90);
+      box-shadow: 0 14px 34px rgba(2,8,23,.07);
     }
     .item h4{
       margin:0;
-      font-size: 15px;
+      font-size: 16px;
       letter-spacing: -0.2px;
+      line-height: 1.25;
     }
     .meta{
-      margin-top: 6px;
+      margin-top: 8px;
       color: var(--muted2);
-      font-weight: 750;
-      font-size: 12.5px;
+      font-weight: 800;
+      font-size: 13px;
       display:flex;
-      gap:8px;
+      gap:10px;
       flex-wrap:wrap;
       align-items:center;
+      line-height: 1.4;
     }
     .bullets{
-      margin: 10px 0 0;
+      margin: 12px 0 0;
       padding-left: 18px;
-      color: rgba(15,23,42,.78);
-      font-weight: 650;
-      font-size: 13.5px;
-      line-height: 1.55;
+      color: rgba(11,18,32,.78);
+      font-weight: 700;
+      font-size: 14.5px;
+      line-height: 1.75;
     }
-    .bullets li{ margin: 6px 0; }
+    .bullets li{ margin: 8px 0; }
 
     /* Certificates */
     .certGrid{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
     .certCard{
-      padding: 14px;
-      border-radius: 18px;
+      padding: 16px;
+      border-radius: 20px;
       border: 1px solid rgba(17,24,39,.08);
-      background: rgba(255,255,255,.88);
-      box-shadow: 0 12px 30px rgba(2,8,23,.07);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 14px 34px rgba(2,8,23,.07);
       cursor:pointer;
       transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
       overflow:hidden;
-      min-height: 170px;
+      min-height: 188px;
     }
     .certCard:hover{
       transform: translateY(-2px);
-      box-shadow: 0 18px 38px rgba(2,8,23,.10);
-      border-color: rgba(59,130,246,.25);
+      box-shadow: 0 20px 44px rgba(2,8,23,.10);
+      border-color: rgba(37,99,235,.25);
     }
     .certThumb{
-      height: 86px;
-      border-radius: 14px;
+      height: 98px;
+      border-radius: 16px;
       overflow:hidden;
-      background: linear-gradient(135deg, rgba(59,130,246,.10), rgba(139,92,246,.08));
+      background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(124,58,237,.08));
       border: 1px solid rgba(17,24,39,.08);
       display:flex;
       align-items:center;
@@ -371,13 +378,15 @@
     }
     .certCard h4{
       margin: 12px 0 6px;
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: -0.2px;
+      line-height: 1.25;
     }
     .certCard .meta2{
       color: var(--muted2);
-      font-weight: 750;
-      font-size: 12.5px;
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 1.35;
     }
 
     /* Modal */
@@ -392,11 +401,11 @@
       z-index: 200;
     }
     .modal{
-      width: min(980px, 96vw);
-      background: rgba(255,255,255,.92);
+      width: min(1040px, 96vw);
+      background: rgba(255,255,255,.96);
       border: 1px solid rgba(255,255,255,.40);
-      border-radius: 20px;
-      box-shadow: 0 30px 90px rgba(2,8,23,.30);
+      border-radius: 22px;
+      box-shadow: 0 34px 96px rgba(2,8,23,.30);
       overflow:hidden;
       transform: translateY(8px);
       animation: pop .18s ease forwards;
@@ -411,28 +420,28 @@
       align-items:center;
       justify-content:space-between;
       gap: 10px;
-      padding: 14px 14px;
+      padding: 14px 16px;
       border-bottom: 1px solid rgba(17,24,39,.10);
-      background: rgba(255,255,255,.92);
+      background: rgba(255,255,255,.96);
     }
-    .modalHeader b{ font-size: 14.5px; }
+    .modalHeader b{ font-size: 15px; }
     .closeBtn{
       border: 1px solid rgba(17,24,39,.12);
-      background: rgba(255,255,255,.92);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-weight: 900;
+      background: rgba(255,255,255,.96);
+      border-radius: 14px;
+      padding: 10px 13px;
+      font-weight: 950;
       cursor:pointer;
     }
     .modalBody{
-      padding: 14px;
-      background: rgba(255,255,255,.86);
+      padding: 16px;
+      background: rgba(255,255,255,.92);
     }
     .modalBody img{
       width:100%;
       height:auto;
       display:block;
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1px solid rgba(17,24,39,.10);
       background:#fff;
     }
@@ -440,30 +449,32 @@
     /* Footer */
     .footer{
       margin-top: 26px;
-      padding: 10px 6px 0;
+      padding: 10px 8px 0;
       color: var(--muted2);
-      font-weight: 700;
-      font-size: 12.5px;
+      font-weight: 750;
+      font-size: 13px;
       display:flex;
       justify-content:space-between;
       gap: 10px;
       flex-wrap: wrap;
+      line-height: 1.5;
     }
 
     /* Responsive */
     @media (max-width: 980px){
       .grid{ grid-template-columns: 1fr; }
       .brand{ min-width: unset; }
-      .hero h1{ font-size: 44px; }
+      .hero h1{ font-size: 46px; }
       .certGrid{ grid-template-columns: repeat(2, 1fr); }
       .cards{ grid-template-columns: 1fr; }
       .mini{ grid-template-columns: 1fr 1fr; }
+      .avatar{ width: 132px; height: 132px; }
     }
     @media (max-width: 520px){
-      .hero h1{ font-size: 38px; }
+      .hero h1{ font-size: 40px; }
+      .hero p{ font-size: 17px; }
       .certGrid{ grid-template-columns: 1fr; }
       .mini{ grid-template-columns: 1fr; }
-      .avatar{ width: 110px; height: 110px; }
     }
   </style>
 </head>
@@ -476,7 +487,7 @@
         <div class="dot"></div>
         <div>
           <b>Laila Azizi</b>
-          <small>Fremont, CA • Open to Hybrid / Remote</small>
+          <small>Fremont, CA • Open to Onsite / Hybrid / Remote</small>
         </div>
       </div>
 
@@ -491,7 +502,7 @@
     </header>
 
     <div class="grid">
-      <div class="card pad hero" id="top">
+      <div class="card pad hero">
         <h1>Turning messy reality into decisions you can ship.</h1>
         <p>
           I connect the dots between <b>data quality</b>, <b>system behavior</b>, and <b>operational impact</b>.
@@ -561,7 +572,7 @@
       <div class="cards">
         <div class="item">
           <h4>Master’s — Statistics & Data Science</h4>
-          <div class="meta">Focus: statistical modeling • NLP coursework • data analysis</div>
+          <div class="meta">Statistical modeling • NLP coursework • Data analysis</div>
           <ul class="bullets">
             <li>Applied statistical methods, modeling, and experimental thinking.</li>
             <li>Hands-on analysis using Python, R, and SQL.</li>
@@ -570,9 +581,9 @@
 
         <div class="item">
           <h4>Bachelor’s — Computer Science (Software Engineering)</h4>
-          <div class="meta">Foundation: software engineering • systems • problem solving</div>
+          <div class="meta">Software engineering • Systems • Debugging</div>
           <ul class="bullets">
-            <li>Built strong fundamentals in programming, debugging, and building reliable systems.</li>
+            <li>Strong foundations in programming, reliability, and problem-solving.</li>
             <li>Comfortable collaborating on technical work and documentation.</li>
           </ul>
         </div>
@@ -601,7 +612,7 @@
           <h4>Data Research Analyst — Meta (via Qualitest)</h4>
           <div class="meta">Bay Area, CA • Data collection • Validation • Research support</div>
           <ul class="bullets">
-            <li>Contributed to structured + unstructured data review workflows supporting research initiatives.</li>
+            <li>Contributed to structured + unstructured data review workflows supporting research.</li>
             <li>Improved consistency and accuracy through careful validation and documentation.</li>
             <li>Worked with cross-functional teams to support research and operational goals.</li>
           </ul>
@@ -609,20 +620,20 @@
 
         <div class="item">
           <h4>Data / Informatics Intern — 113 Industries</h4>
-          <div class="meta">Data analysis • Reporting • Data cleaning</div>
+          <div class="meta">Data cleaning • Analysis • Reporting</div>
           <ul class="bullets">
             <li>Supported data cleanup and analysis for business/reporting needs.</li>
-            <li>Produced simple summaries and insights from real-world, messy datasets.</li>
-            <li>Collaborated to improve data organization and repeatable reporting.</li>
+            <li>Produced summaries and insights from real-world, messy datasets.</li>
+            <li>Helped improve data organization and repeatable reporting.</li>
           </ul>
         </div>
 
         <div class="item">
           <h4>Project Management Cohort — MakeTechPurple (Certificate)</h4>
-          <div class="meta">PM foundations • Delivery • Stakeholders</div>
+          <div class="meta">Delivery • Stakeholders • Execution</div>
           <ul class="bullets">
-            <li>Strengthened product thinking: delivery planning, stakeholder communication, and execution.</li>
-            <li>Practiced presenting ideas clearly and building structured, recruiter-friendly narratives.</li>
+            <li>Strengthened product thinking: planning, stakeholder communication, and execution.</li>
+            <li>Practiced structured, recruiter-friendly narratives and presentations.</li>
           </ul>
         </div>
       </div>
@@ -652,7 +663,7 @@
             <li>Log-based investigation + issue triage support</li>
             <li>QA/validation mindset (accuracy, repeatability, documentation)</li>
             <li>Cross-functional collaboration (Product/Eng/Ops)</li>
-            <li>Process clarity + operational metrics</li>
+            <li>Operational metrics + process clarity</li>
           </ul>
         </div>
       </div>
@@ -716,7 +727,7 @@
           <ul class="bullets">
             <li>Built practical metrics and summaries designed for operational decision-making.</li>
             <li>Emphasized reliability: checks, consistency, and readable reporting.</li>
-            <li>Reusable approach for future projects and portfolio expansion.</li>
+            <li>Reusable structure for future portfolio expansion.</li>
           </ul>
         </div>
       </div>
@@ -759,10 +770,8 @@
   </div>
 
   <script>
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Active nav pill on scroll
     const sections = ["education","experience","skills","certificates","projects","contact"]
       .map(id => document.getElementById(id));
     const pills = Array.from(document.querySelectorAll(".pill"));
@@ -781,7 +790,6 @@
     sections.forEach(sec => sec && observer.observe(sec));
     setActive("education");
 
-    // Fix: smooth scroll with offset feel (sticky header)
     pills.forEach(a => {
       a.addEventListener("click", (e) => {
         const href = a.getAttribute("href");
@@ -795,7 +803,6 @@
       });
     });
 
-    // Certificate modal (fix broken previews)
     const overlay = document.getElementById("modalOverlay");
     const modalTitle = document.getElementById("modalTitle");
     const modalImg = document.getElementById("modalImg");
