@@ -1,370 +1,469 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Laila Azizi — Data Research Analyst</title>
-  <meta name="description" content="Laila Azizi — Data Research Analyst. Portfolio: Education, Experience, Skills, Certificates, Projects, Contact." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Laila Azizi — Data Research Analyst (Fremont, CA). Portfolio: education, experience, skills, certificates, and projects." />
 
   <style>
     :root{
-      --bg0:#f7f9ff;
-      --bg1:#eef2ff;
-      --card:#ffffffcc;
-      --stroke:#e8ecff;
-      --text:#0b1220;
-      --muted:#4b5563;
-      --muted2:#6b7280;
-      --accent:#3b82f6;
+      --bg0: #f6f8ff;
+      --bg1: #eef3ff;
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.92);
+      --border: rgba(17, 24, 39, 0.10);
+      --text: #0f172a;
+      --muted: rgba(15,23,42,.72);
+      --muted2: rgba(15,23,42,.55);
+      --shadow: 0 22px 60px rgba(2,8,23,.10);
+      --shadow2: 0 12px 28px rgba(2,8,23,.10);
+      --accent: #3b82f6;
       --accent2:#8b5cf6;
-      --shadow: 0 20px 55px rgba(16, 24, 40, .12);
-      --shadow2: 0 10px 25px rgba(16, 24, 40, .10);
-      --r: 22px;
+      --radius: 22px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
       background:
-        radial-gradient(900px 500px at 12% 12%, rgba(59,130,246,.18), transparent 60%),
-        radial-gradient(900px 500px at 88% 20%, rgba(139,92,246,.16), transparent 60%),
-        radial-gradient(900px 500px at 70% 85%, rgba(16,185,129,.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 0%, rgba(59,130,246,.14), transparent 55%),
+        radial-gradient(900px 600px at 85% 15%, rgba(139,92,246,.14), transparent 55%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
       min-height:100vh;
     }
 
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:1120px; margin:0 auto; padding:28px 18px 90px}
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 16px 64px;
+    }
 
-    /* Top bar */
+    /* Topbar */
     .topbar{
-      position:sticky;
-      top:14px;
-      z-index:50;
+      position: sticky;
+      top: 14px;
+      z-index: 50;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
-      padding:12px 14px;
-      border:1px solid rgba(232,236,255,.8);
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(12px);
-      border-radius:999px;
-      box-shadow: 0 10px 35px rgba(16,24,40,.10);
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid rgba(232,236,255,.85);
+      background: rgba(255,255,255,.70);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+      box-shadow: var(--shadow2);
     }
     .brand{
-      display:flex; align-items:center; gap:10px; padding:6px 10px; border-radius:999px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 260px;
     }
     .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.3) 45%, transparent 60%),
-        linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 4px rgba(59,130,246,.10);
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,0) 45%),
+                  linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 8px 18px rgba(59,130,246,.25);
+      flex: 0 0 auto;
     }
-    .brand b{font-size:14px}
-    .brand span{font-size:12px; color:var(--muted2)}
+    .brand b{
+      font-size: 14.5px;
+      letter-spacing: .2px;
+    }
+    .brand small{
+      display:block;
+      margin-top:2px;
+      font-size: 12px;
+      color: var(--muted2);
+      font-weight: 600;
+    }
 
     .nav{
-      display:flex; gap:8px; flex-wrap:wrap;
-      justify-content:flex-end;
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
     .pill{
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(232,236,255,.9);
-      background: rgba(255,255,255,.70);
-      color:#111827;
-      font-weight:600;
-      font-size:13px;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(232,236,255,.95);
+      background: rgba(255,255,255,.86);
+      color: #111827;
+      font-weight: 800;
+      font-size: 13px;
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease, border-color .14s ease;
       user-select:none;
     }
     .pill:hover{
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(16,24,40,.10);
-      background: rgba(255,255,255,.92);
+      box-shadow: 0 10px 22px rgba(2,8,23,.10);
+      background: rgba(255,255,255,.96);
+      border-color: rgba(59,130,246,.25);
     }
     .pill.active{
-      background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(139,92,246,.10));
-      border-color: rgba(59,130,246,.25);
-      box-shadow: 0 12px 28px rgba(59,130,246,.14);
+      border-color: rgba(59,130,246,.35);
+      box-shadow: 0 14px 30px rgba(59,130,246,.12);
     }
 
     /* Layout */
     .grid{
-      margin-top:22px;
       display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 980px){
-      .grid{grid-template-columns:1fr}
-      .nav{justify-content:center}
-      .topbar{top:10px}
+      grid-template-columns: 1.35fr .85fr;
+      gap: 16px;
+      margin-top: 16px;
+      align-items: stretch;
     }
 
     .card{
-      border-radius: var(--r);
-      border:1px solid rgba(232,236,255,.9);
-      background: var(--card);
-      backdrop-filter: blur(14px);
+      border: 1px solid rgba(17,24,39,.09);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(16px);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .card.pad{padding:22px}
+    .pad{ padding: 22px; }
 
-    /* Hero (3D tilt) */
-    .tilt{
-      transform-style: preserve-3d;
-      perspective: 1200px;
-      will-change: transform;
-    }
+    /* Hero */
     .hero h1{
-      margin:0;
-      font-size: 48px;
-      letter-spacing:-1.6px;
-      line-height:1.03;
+      margin: 0;
+      font-size: 52px;
+      line-height: 1.02;
+      letter-spacing: -1.8px;
     }
     .hero p{
-      margin:12px 0 0;
+      margin: 14px 0 0;
+      font-size: 16px;
+      line-height: 1.75;
       color: var(--muted);
-      font-size: 15px;
-      line-height:1.7;
-      max-width: 62ch;
-    }
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-    .chip{
-      font-size:12px; font-weight:600;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.78);
-      color:#0f172a;
+      max-width: 70ch;
     }
 
-    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.85);
-      box-shadow: var(--shadow2);
-      font-weight:700;
-      font-size:13px;
-      transition: transform .15s ease, box-shadow .15s ease;
+    .cta{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      align-items:center;
     }
-    .btn:hover{transform: translateY(-2px); box-shadow: 0 18px 40px rgba(16,24,40,.12)}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(17,24,39,.12);
+      background: rgba(255,255,255,.92);
+      font-weight: 900;
+      font-size: 14px;
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease, border-color .14s ease;
+      box-shadow: 0 10px 22px rgba(2,8,23,.08);
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(2,8,23,.10);
+      border-color: rgba(59,130,246,.25);
+    }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(139,92,246,.88));
-      color:#fff;
+      color: #fff;
       border-color: rgba(59,130,246,.35);
+      background: linear-gradient(135deg, rgba(59,130,246,.96), rgba(139,92,246,.86));
+      box-shadow: 0 18px 40px rgba(59,130,246,.18);
+    }
+    .btn.primary:hover{ box-shadow: 0 22px 50px rgba(59,130,246,.22); }
+    .btn.link{
+      background: transparent;
+      border-color: rgba(17,24,39,.10);
+      box-shadow:none;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .chip{
+      font-size: 12.5px;
+      font-weight: 800;
+      color: rgba(15,23,42,.72);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(17,24,39,.08);
     }
 
     /* Profile card */
     .profile{
-      display:flex; gap:14px; align-items:center;
-      padding:18px;
+      display:flex;
+      gap: 14px;
+      align-items:flex-start;
     }
     .avatar{
-      width:128px; height:128px;
-      border-radius:24px;
-      object-fit:cover;
-      box-shadow: 0 22px 45px rgba(16,24,40,.18);
-      border: 1px solid rgba(255,255,255,.75);
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      overflow:hidden;
+      flex: 0 0 auto;
+      box-shadow: 0 18px 44px rgba(2,8,23,.18);
+      border: 1px solid rgba(17,24,39,.10);
       background:#fff;
     }
-    .profile h2{margin:0; font-size:18px}
-    .profile p{margin:6px 0 0; color:var(--muted2); font-size:13px; line-height:1.5}
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+    .profile h2{
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+    }
+    .profile .sub{
+      margin-top: 6px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.4;
+    }
     .mini{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:10px;
-      padding: 0 18px 18px;
+      gap: 10px;
+      margin-top: 14px;
     }
     .mini .box{
-      border-radius: 16px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.78);
       padding: 12px 12px;
-      min-height: 74px;
+      border-radius: 16px;
+      border: 1px solid rgba(17,24,39,.08);
+      background: rgba(255,255,255,.84);
+      box-shadow: 0 10px 24px rgba(2,8,23,.06);
+      min-height: 82px;
     }
-    .box b{display:block; font-size:12px; color:#111827}
-    .box span{display:block; margin-top:6px; font-size:12px; color:var(--muted); line-height:1.45}
+    .mini b{
+      display:block;
+      font-size: 12px;
+      letter-spacing:.4px;
+      text-transform: uppercase;
+      color: rgba(15,23,42,.58);
+      margin-bottom: 6px;
+    }
+    .mini span{
+      color: rgba(15,23,42,.80);
+      font-weight: 750;
+      font-size: 13px;
+      line-height: 1.45;
+      display:block;
+    }
 
     /* Sections */
-    section{scroll-margin-top: 110px; margin-top:18px}
-    .sec-head{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
-      padding: 18px 22px 0;
+    section{
+      margin-top: 18px;
+      scroll-margin-top: 100px;
     }
-    .sec-head h3{
-      margin:0;
-      font-size: 20px;
-      letter-spacing:-.3px;
-    }
-    .sec-head .hint{color:var(--muted2); font-size:12px}
-
-    .list{
-      padding: 14px 22px 22px;
-      display:grid;
-      gap:12px;
-    }
-
-    .item{
-      border-radius: 18px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.82);
-      padding: 14px 14px;
-      box-shadow: 0 12px 28px rgba(16,24,40,.08);
-    }
-    .item .top{
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    .sectionTitle{
+      display:flex;
       align-items:baseline;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 0 6px;
+      margin-bottom: 10px;
     }
-    .item .role{font-weight:800; font-size:14px}
-    .item .meta{color:var(--muted2); font-size:12px}
-    .item ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.6}
-    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .tag{
-      font-size:11px;
-      font-weight:700;
-      padding:7px 9px;
-      border-radius:999px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.78);
-      color:#111827;
+    .sectionTitle h3{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -0.6px;
+    }
+    .sectionTitle p{
+      margin:0;
+      color: var(--muted2);
+      font-weight: 700;
+      font-size: 13px;
     }
 
-    /* Certificates grid */
-    .cert-grid{
-      padding: 14px 22px 22px;
+    .cards{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .item{
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(17,24,39,.08);
+      background: rgba(255,255,255,.84);
+      box-shadow: 0 12px 30px rgba(2,8,23,.07);
+    }
+    .item h4{
+      margin:0;
+      font-size: 15px;
+      letter-spacing: -0.2px;
+    }
+    .meta{
+      margin-top: 6px;
+      color: var(--muted2);
+      font-weight: 750;
+      font-size: 12.5px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .bullets{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(15,23,42,.78);
+      font-weight: 650;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .bullets li{ margin: 6px 0; }
+
+    /* Certificates */
+    .certGrid{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
-      gap:12px;
+      gap: 14px;
     }
-    @media (max-width: 980px){ .cert-grid{grid-template-columns: repeat(2, 1fr);} }
-    @media (max-width: 560px){ .cert-grid{grid-template-columns: 1fr;} }
-
-    .cert{
-      position:relative;
+    .certCard{
+      padding: 14px;
       border-radius: 18px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.86);
-      box-shadow: 0 14px 30px rgba(16,24,40,.09);
-      overflow:hidden;
+      border: 1px solid rgba(17,24,39,.08);
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 12px 30px rgba(2,8,23,.07);
       cursor:pointer;
-      transition: transform .16s ease, box-shadow .16s ease;
-      min-height: 160px;
-    }
-    .cert:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 20px 45px rgba(16,24,40,.12);
-    }
-    .cert .thumb{
-      height: 92px;
-      margin: 12px;
-      border-radius: 14px;
-      border:1px solid rgba(232,236,255,.95);
-      background: linear-gradient(135deg, rgba(59,130,246,.10), rgba(139,92,246,.08));
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
       overflow:hidden;
+      min-height: 170px;
+    }
+    .certCard:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(2,8,23,.10);
+      border-color: rgba(59,130,246,.25);
+    }
+    .certThumb{
+      height: 86px;
+      border-radius: 14px;
+      overflow:hidden;
+      background: linear-gradient(135deg, rgba(59,130,246,.10), rgba(139,92,246,.08));
+      border: 1px solid rgba(17,24,39,.08);
       display:flex;
       align-items:center;
       justify-content:center;
     }
-    .cert img{
+    .certThumb img{
       width:100%;
       height:100%;
-      object-fit:cover;
+      object-fit: cover;
       display:block;
     }
-    .cert .txt{
-      padding: 0 12px 12px;
+    .certCard h4{
+      margin: 12px 0 6px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
     }
-    .cert .txt b{display:block; font-size:13px}
-    .cert .txt span{display:block; margin-top:5px; font-size:12px; color:var(--muted2)}
-    .cert .open{
-      position:absolute;
-      right:10px; bottom:10px;
-      padding:8px 10px;
-      border-radius: 12px;
-      border:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.90);
-      font-weight:800;
-      font-size:12px;
-      box-shadow: 0 10px 22px rgba(16,24,40,.10);
+    .certCard .meta2{
+      color: var(--muted2);
+      font-weight: 750;
+      font-size: 12.5px;
     }
 
     /* Modal */
-    .modal{
-      position:fixed;
-      inset:0;
+    .modalOverlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(2,8,23,.55);
       display:none;
-      align-items:center;
-      justify-content:center;
+      align-items: center;
+      justify-content: center;
       padding: 18px;
-      background: rgba(11,18,32,.35);
-      backdrop-filter: blur(6px);
       z-index: 200;
     }
-    .modal.show{display:flex}
-    .modal-card{
-      width:min(1060px, 100%);
-      border-radius: 22px;
-      border:1px solid rgba(232,236,255,.85);
+    .modal{
+      width: min(980px, 96vw);
       background: rgba(255,255,255,.92);
-      box-shadow: 0 35px 90px rgba(16,24,40,.22);
+      border: 1px solid rgba(255,255,255,.40);
+      border-radius: 20px;
+      box-shadow: 0 30px 90px rgba(2,8,23,.30);
       overflow:hidden;
+      transform: translateY(8px);
+      animation: pop .18s ease forwards;
+      backdrop-filter: blur(14px);
     }
-    .modal-top{
+    @keyframes pop{
+      from{ opacity:.0; transform: translateY(10px) scale(.98); }
+      to{ opacity:1; transform: translateY(0) scale(1); }
+    }
+    .modalHeader{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:10px;
-      padding: 12px 14px;
-      border-bottom:1px solid rgba(232,236,255,.95);
-      background: rgba(255,255,255,.90);
-    }
-    .modal-top b{font-size:14px}
-    .modal-actions{display:flex; gap:8px; align-items:center}
-    .mbtn{
-      padding:10px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(232,236,255,.95);
+      gap: 10px;
+      padding: 14px 14px;
+      border-bottom: 1px solid rgba(17,24,39,.10);
       background: rgba(255,255,255,.92);
-      font-weight:800;
-      font-size:12px;
+    }
+    .modalHeader b{ font-size: 14.5px; }
+    .closeBtn{
+      border: 1px solid rgba(17,24,39,.12);
+      background: rgba(255,255,255,.92);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 900;
       cursor:pointer;
     }
-    .modal-body{
+    .modalBody{
       padding: 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(248,250,255,.95));
+      background: rgba(255,255,255,.86);
     }
-    .modal-img{
+    .modalBody img{
       width:100%;
-      max-height: 72vh;
-      object-fit: contain;
-      border-radius: 16px;
-      border:1px solid rgba(232,236,255,.95);
-      background:#fff;
+      height:auto;
       display:block;
+      border-radius: 14px;
+      border: 1px solid rgba(17,24,39,.10);
+      background:#fff;
     }
 
     /* Footer */
-    .foot{
-      margin-top:18px;
-      padding: 14px 6px 0;
+    .footer{
+      margin-top: 26px;
+      padding: 10px 6px 0;
       color: var(--muted2);
-      font-size:12px;
-      text-align:center;
+      font-weight: 700;
+      font-size: 12.5px;
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+      .hero h1{ font-size: 44px; }
+      .certGrid{ grid-template-columns: repeat(2, 1fr); }
+      .cards{ grid-template-columns: 1fr; }
+      .mini{ grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px){
+      .hero h1{ font-size: 38px; }
+      .certGrid{ grid-template-columns: 1fr; }
+      .mini{ grid-template-columns: 1fr; }
+      .avatar{ width: 110px; height: 110px; }
     }
   </style>
 </head>
@@ -376,8 +475,8 @@
       <div class="brand">
         <div class="dot"></div>
         <div>
-          <b>Laila Azizi</b><br>
-          <span>Fremont, CA • Open to Hybrid / Remote</span>
+          <b>Laila Azizi</b>
+          <small>Fremont, CA • Open to Hybrid / Remote</small>
         </div>
       </div>
 
@@ -392,47 +491,42 @@
     </header>
 
     <div class="grid">
-      <div class="card pad tilt hero" id="heroCard">
-        <div class="chips">
-          <div class="chip">Data Research Analyst</div>
-          <div class="chip">Policy & Ops Analytics</div>
-          <div class="chip">Systems & QA Validation</div>
-        </div>
-
+      <div class="card pad hero" id="top">
         <h1>Turning messy reality into decisions you can ship.</h1>
         <p>
           I connect the dots between <b>data quality</b>, <b>system behavior</b>, and <b>operational impact</b>.
-          I’ve supported fast-moving workflows across technology environments (Google via Accenture, Meta via Qualitest),
-          and I’m known for clear documentation, trustworthy metrics, and practical insights.
+          I’ve supported fast-moving workflows (Google via Accenture, Meta via Qualitest) and I’m known for clear documentation,
+          trustworthy metrics, and practical insights.
         </p>
 
         <div class="cta">
           <a class="btn primary" href="#projects">View projects</a>
           <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-          <a class="btn" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:azizilaila03@gmail.com">Email</a>
+          <a class="btn link" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn link" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn link" href="mailto:azizilaila03@gmail.com">Email</a>
         </div>
 
-        <div class="chips" style="margin-top:16px">
-          <div class="chip">SQL</div>
-          <div class="chip">Python</div>
-          <div class="chip">R</div>
-          <div class="chip">Dashboards & Reporting</div>
-          <div class="chip">Validation / QA</div>
-          <div class="chip">Stakeholder Writing</div>
+        <div class="chips" aria-label="Key skills tags">
+          <span class="chip">SQL</span>
+          <span class="chip">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">Data Quality</span>
+          <span class="chip">Validation / QA</span>
+          <span class="chip">Dashboards & Reporting</span>
+          <span class="chip">Stakeholder Writing</span>
         </div>
       </div>
 
-      <aside class="card">
+      <aside class="card pad">
         <div class="profile">
-          <img class="avatar" src="assets/headshot.jpg" alt="Headshot of Laila Azizi" />
+          <div class="avatar">
+            <img src="assets/headshot.jpg" alt="Laila Azizi headshot" />
+          </div>
           <div>
             <h2>Laila Azizi</h2>
-            <p>Data Research Analyst • Systems & QA Validation • Ops Analytics</p>
-            <p style="margin-top:10px; color:var(--muted)">
-              Strong in turning logs + datasets into stakeholder-ready insights.
-            </p>
+            <div class="sub">Data Research Analyst • Systems & QA Validation • Ops Analytics</div>
+            <div class="sub">Email: <a href="mailto:azizilaila03@gmail.com"><b>azizilaila03@gmail.com</b></a></div>
           </div>
         </div>
 
@@ -442,289 +536,224 @@
             <span>Operational clarity, trustworthy metrics, and documentation that makes decisions easier.</span>
           </div>
           <div class="box">
+            <b>Strength</b>
+            <span>Turning logs + datasets into stakeholder-ready insights.</span>
+          </div>
+          <div class="box">
             <b>Tooling</b>
-            <span>Python • SQL • R<br>Excel • Dashboards</span>
+            <span>Python • SQL • R • Excel • Dashboards</span>
           </div>
           <div class="box">
             <b>Domains</b>
             <span>Data Quality • QA/Validation • Ops • Policy-style analysis</span>
           </div>
-          <div class="box">
-            <b>Based in</b>
-            <span>Fremont, CA • Open to hybrid/remote roles</span>
-          </div>
         </div>
       </aside>
     </div>
 
-    <!-- EDUCATION -->
-    <section id="education" class="card">
-      <div class="sec-head">
+    <!-- Education -->
+    <section id="education">
+      <div class="sectionTitle">
         <h3>Education</h3>
-        <div class="hint">Credentials & academic foundation</div>
+        <p>Degrees + formal training</p>
       </div>
-      <div class="list">
+
+      <div class="cards">
         <div class="item">
-          <div class="top">
-            <div class="role">M.S. Statistics & Data Science</div>
-            <div class="meta">Bay Area, CA</div>
-          </div>
-          <ul>
-            <li>Graduate coursework in statistical modeling, data analysis, and applied ML foundations.</li>
-            <li>Hands-on projects using Python/R, experimentation, and reporting for decision-making.</li>
+          <h4>Master’s — Statistics & Data Science</h4>
+          <div class="meta">Focus: statistical modeling • NLP coursework • data analysis</div>
+          <ul class="bullets">
+            <li>Applied statistical methods, modeling, and experimental thinking.</li>
+            <li>Hands-on analysis using Python, R, and SQL.</li>
           </ul>
         </div>
 
         <div class="item">
-          <div class="top">
-            <div class="role">B.S. Computer Science (Software Engineering)</div>
-            <div class="meta">Bay Area, CA</div>
-          </div>
-          <ul>
-            <li>Foundations in programming, systems thinking, and practical engineering workflows.</li>
+          <h4>Bachelor’s — Computer Science (Software Engineering)</h4>
+          <div class="meta">Foundation: software engineering • systems • problem solving</div>
+          <ul class="bullets">
+            <li>Built strong fundamentals in programming, debugging, and building reliable systems.</li>
+            <li>Comfortable collaborating on technical work and documentation.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="card">
-      <div class="sec-head">
-        <h3>Work Experience</h3>
-        <div class="hint">Impact-focused highlights</div>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="sectionTitle">
+        <h3>Experience</h3>
+        <p>Impact-focused highlights</p>
       </div>
 
-      <div class="list">
+      <div class="cards">
         <div class="item">
-          <div class="top">
-            <div class="role">Data Research / Systems Analyst — Google (via Accenture)</div>
-            <div class="meta">Mountain View, CA</div>
-          </div>
-          <ul>
-            <li>Supported system validation and data-quality workflows across internal platforms.</li>
-            <li>Analyzed logs, datasets, and test outputs to inform operational + engineering decisions.</li>
-            <li>Partnered cross-functionally to improve reliability, accuracy, and process clarity.</li>
+          <h4>Data Research / Systems Analyst — Google (via Accenture)</h4>
+          <div class="meta">Mountain View, CA • Data quality • Validation • Ops analytics</div>
+          <ul class="bullets">
+            <li>Supported system validation and data quality workflows across internal platforms.</li>
+            <li>Reviewed logs, datasets, and test outputs to support operational and engineering decisions.</li>
+            <li>Partnered cross-functionally to improve reliability, clarity, and triage efficiency.</li>
           </ul>
-          <div class="tags">
-            <div class="tag">Validation</div>
-            <div class="tag">Debugging</div>
-            <div class="tag">Reporting</div>
-            <div class="tag">Ops Support</div>
-          </div>
         </div>
 
         <div class="item">
-          <div class="top">
-            <div class="role">Data Research Analyst — Meta (via Qualitest)</div>
-            <div class="meta">Bay Area, CA</div>
-          </div>
-          <ul>
+          <h4>Data Research Analyst — Meta (via Qualitest)</h4>
+          <div class="meta">Bay Area, CA • Data collection • Validation • Research support</div>
+          <ul class="bullets">
             <li>Contributed to structured + unstructured data review workflows supporting research initiatives.</li>
             <li>Improved consistency and accuracy through careful validation and documentation.</li>
             <li>Worked with cross-functional teams to support research and operational goals.</li>
           </ul>
-          <div class="tags">
-            <div class="tag">Data QA</div>
-            <div class="tag">Process</div>
-            <div class="tag">Ops</div>
-          </div>
         </div>
 
         <div class="item">
-          <div class="top">
-            <div class="role">Data / Informatics Analyst — 113 Industries (Internship)</div>
-            <div class="meta">Contract / Internship</div>
-          </div>
-          <ul>
-            <li>Supported data organization, analysis, and reporting to help teams make operational decisions.</li>
-            <li>Assisted with data cleanup/validation and basic insights reporting (SQL/Python/Excel as needed).</li>
+          <h4>Data / Informatics Intern — 113 Industries</h4>
+          <div class="meta">Data analysis • Reporting • Data cleaning</div>
+          <ul class="bullets">
+            <li>Supported data cleanup and analysis for business/reporting needs.</li>
+            <li>Produced simple summaries and insights from real-world, messy datasets.</li>
+            <li>Collaborated to improve data organization and repeatable reporting.</li>
           </ul>
-          <div class="tags">
-            <div class="tag">Excel</div>
-            <div class="tag">Data Cleanup</div>
-            <div class="tag">Insights</div>
-          </div>
+        </div>
+
+        <div class="item">
+          <h4>Project Management Cohort — MakeTechPurple (Certificate)</h4>
+          <div class="meta">PM foundations • Delivery • Stakeholders</div>
+          <ul class="bullets">
+            <li>Strengthened product thinking: delivery planning, stakeholder communication, and execution.</li>
+            <li>Practiced presenting ideas clearly and building structured, recruiter-friendly narratives.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="card">
-      <div class="sec-head">
+    <!-- Skills -->
+    <section id="skills">
+      <div class="sectionTitle">
         <h3>Skills</h3>
-        <div class="hint">What recruiters scan for (fast)</div>
+        <p>What recruiters scan for</p>
       </div>
-      <div class="list">
+
+      <div class="cards">
         <div class="item">
-          <div class="top">
-            <div class="role">Analytics</div>
-            <div class="meta">Core strengths</div>
-          </div>
-          <ul>
+          <h4>Analytics</h4>
+          <ul class="bullets">
             <li>SQL, Python, R</li>
-            <li>Exploratory analysis, dashboards, reporting</li>
-            <li>Experimental thinking + metric design</li>
+            <li>Exploratory analysis, reporting, dashboards</li>
+            <li>Data validation, quality checks, consistency reviews</li>
+            <li>Clear summaries for non-technical stakeholders</li>
           </ul>
         </div>
 
         <div class="item">
-          <div class="top">
-            <div class="role">Systems / Ops</div>
-            <div class="meta">Execution</div>
-          </div>
-          <ul>
-            <li>Data quality, QA, system validation</li>
-            <li>Log-based investigation + issue triage</li>
-            <li>Clear documentation for cross-functional teams</li>
+          <h4>Systems / Ops</h4>
+          <ul class="bullets">
+            <li>Log-based investigation + issue triage support</li>
+            <li>QA/validation mindset (accuracy, repeatability, documentation)</li>
+            <li>Cross-functional collaboration (Product/Eng/Ops)</li>
+            <li>Process clarity + operational metrics</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates" class="card">
-      <div class="sec-head">
+    <!-- Certificates -->
+    <section id="certificates">
+      <div class="sectionTitle">
         <h3>Certificates</h3>
-        <div class="hint">Click any certificate to preview</div>
+        <p>Click a card to preview</p>
       </div>
 
-      <div class="cert-grid">
-        <div class="cert" data-title="Google Data Analytics" data-src="assets/cert-google-data-analytics.png">
-          <div class="thumb">
-            <img src="assets/cert-google-data-analytics.png" alt="Google Data Analytics certificate preview">
-          </div>
-          <div class="txt">
-            <b>Google Data Analytics</b>
-            <span>Preview certificate</span>
-          </div>
-          <div class="open">Preview</div>
+      <div class="certGrid">
+        <div class="certCard" data-title="Google Data Analytics" data-img="assets/cert-google-data-analytics.png">
+          <div class="certThumb"><img src="assets/cert-google-data-analytics.png" alt="Google Data Analytics certificate preview"></div>
+          <h4>Google Data Analytics</h4>
+          <div class="meta2">Preview certificate</div>
         </div>
 
-        <div class="cert" data-title="Python Certificate" data-src="assets/cert-python.png">
-          <div class="thumb">
-            <img src="assets/cert-python.png" alt="Python certificate preview">
-          </div>
-          <div class="txt">
-            <b>Python</b>
-            <span>Preview certificate</span>
-          </div>
-          <div class="open">Preview</div>
+        <div class="certCard" data-title="Python Certificate" data-img="assets/cert-python.png">
+          <div class="certThumb"><img src="assets/cert-python.png" alt="Python certificate preview"></div>
+          <h4>Python Certificate</h4>
+          <div class="meta2">Preview certificate</div>
         </div>
 
-        <div class="cert" data-title="Java Certificate" data-src="assets/cert-java.png">
-          <div class="thumb">
-            <img src="assets/cert-java.png" alt="Java certificate preview">
-          </div>
-          <div class="txt">
-            <b>Java</b>
-            <span>Preview certificate</span>
-          </div>
-          <div class="open">Preview</div>
+        <div class="certCard" data-title="Java Certificate" data-img="assets/cert-java.png">
+          <div class="certThumb"><img src="assets/cert-java.png" alt="Java certificate preview"></div>
+          <h4>Java Certificate</h4>
+          <div class="meta2">Preview certificate</div>
         </div>
 
-        <div class="cert" data-title="MakeTechPurple Project Management (2025)" data-src="assets/cert-maketechpurple-2025.png">
-          <div class="thumb">
-            <img src="assets/cert-maketechpurple-2025.png" alt="MakeTechPurple certificate preview">
-          </div>
-          <div class="txt">
-            <b>MakeTechPurple (2025)</b>
-            <span>Preview certificate</span>
-          </div>
-          <div class="open">Preview</div>
+        <div class="certCard" data-title="MakeTechPurple (2025)" data-img="assets/cert-maketechpurple-2025.png">
+          <div class="certThumb"><img src="assets/cert-maketechpurple-2025.png" alt="MakeTechPurple certificate preview"></div>
+          <h4>MakeTechPurple (2025)</h4>
+          <div class="meta2">Preview certificate</div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <div class="sec-head">
+    <!-- Projects -->
+    <section id="projects">
+      <div class="sectionTitle">
         <h3>Projects</h3>
-        <div class="hint">Clear, recruiter-friendly summaries</div>
+        <p>Short + recruiter-friendly</p>
       </div>
 
-      <div class="list">
+      <div class="cards">
         <div class="item">
-          <div class="top">
-            <div class="role">Detecting & Analyzing Harmful Content on a Social Media Platform</div>
-            <div class="meta">Policy + data analysis portfolio project</div>
-          </div>
-          <ul>
-            <li>Simulated and analyzed flagged content patterns across regions and categories.</li>
-            <li>Produced stakeholder-ready summaries and operational insights (EDA + visualization).</li>
-            <li>Designed outputs in a policy-style structure: problem → approach → findings → recommendation.</li>
+          <h4>Detecting & Analyzing Harmful Content (Policy + Data Project)</h4>
+          <div class="meta">NLP • Analysis • Insights • Reporting</div>
+          <ul class="bullets">
+            <li>Simulated flagged-content data to analyze trends across categories and regions.</li>
+            <li>Created clear insights and policy-style summaries that stakeholders can act on.</li>
+            <li>Focused on data quality, structure, and explainable results.</li>
           </ul>
-          <div class="tags">
-            <div class="tag">NLP / Policy</div>
-            <div class="tag">EDA</div>
-            <div class="tag">Insights</div>
-            <div class="tag">Storytelling</div>
-          </div>
         </div>
 
         <div class="item">
-          <div class="top">
-            <div class="role">Predictive Analytics & Data Modeling (Portfolio)</div>
-            <div class="meta">Forecasting / regression / classification</div>
-          </div>
-          <ul>
-            <li>Built and evaluated baseline models with strong data-quality checks and validation.</li>
-            <li>Focused on interpretable results and practical reporting for decision-making.</li>
+          <h4>Operational Metrics & Data Quality Portfolio (Work-style Analysis)</h4>
+          <div class="meta">Dashboards • Validation • Reporting</div>
+          <ul class="bullets">
+            <li>Built practical metrics and summaries designed for operational decision-making.</li>
+            <li>Emphasized reliability: checks, consistency, and readable reporting.</li>
+            <li>Reusable approach for future projects and portfolio expansion.</li>
           </ul>
-          <div class="tags">
-            <div class="tag">Modeling</div>
-            <div class="tag">Metrics</div>
-            <div class="tag">Validation</div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="card">
-      <div class="sec-head">
+    <!-- Contact -->
+    <section id="contact">
+      <div class="sectionTitle">
         <h3>Contact</h3>
-        <div class="hint">Fast ways to reach you</div>
+        <p>Quick ways to reach me</p>
       </div>
 
-      <div class="list">
-        <div class="item">
-          <div class="top">
-            <div class="role">Email</div>
-            <div class="meta"><a href="mailto:azizilaila03@gmail.com">azizilaila03@gmail.com</a></div>
-          </div>
+      <div class="card pad">
+        <div class="cta">
+          <a class="btn primary" href="mailto:azizilaila03@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/LailaAzizi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
         </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="role">LinkedIn</div>
-            <div class="meta"><a href="https://www.linkedin.com/in/lailaazizi/" target="_blank" rel="noopener">linkedin.com/in/lailaazizi</a></div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="role">GitHub</div>
-            <div class="meta"><a href="https://github.com/LailaAzizi" target="_blank" rel="noopener">github.com/LailaAzizi</a></div>
-          </div>
+        <div class="footer">
+          <span>© <span id="year"></span> Laila Azizi</span>
+          <span>Built on GitHub Pages • Clean UI • Fast</span>
         </div>
       </div>
     </section>
 
-    <div class="foot">© <span id="year"></span> Laila Azizi • Built with GitHub Pages</div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Certificate Preview">
-    <div class="modal-card">
-      <div class="modal-top">
+  <!-- Certificate Modal -->
+  <div class="modalOverlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <div class="modal">
+      <div class="modalHeader">
         <b id="modalTitle">Certificate</b>
-        <div class="modal-actions">
-          <a class="mbtn" id="modalOpenNew" href="#" target="_blank" rel="noopener">Open in new tab</a>
-          <button class="mbtn" id="modalClose" type="button">Close</button>
-        </div>
+        <button class="closeBtn" id="closeModalBtn">Close</button>
       </div>
-      <div class="modal-body">
-        <img class="modal-img" id="modalImg" alt="Certificate preview">
+      <div class="modalBody">
+        <img id="modalImg" src="" alt="Certificate preview image">
       </div>
     </div>
   </div>
@@ -733,94 +762,73 @@
     // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Active nav pill based on scroll
+    // Active nav pill on scroll
+    const sections = ["education","experience","skills","certificates","projects","contact"]
+      .map(id => document.getElementById(id));
     const pills = Array.from(document.querySelectorAll(".pill"));
-    const sections = pills
-      .map(a => document.querySelector(a.getAttribute("href")))
-      .filter(Boolean);
 
-    const obs = new IntersectionObserver((entries) => {
+    const setActive = (id) => {
+      pills.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+    };
+
+    const observer = new IntersectionObserver((entries) => {
       const visible = entries
         .filter(e => e.isIntersecting)
         .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if(!visible) return;
+      if(visible) setActive(visible.target.id);
+    }, { root: null, threshold: [0.12, 0.22, 0.35] });
 
-      pills.forEach(p => p.classList.remove("active"));
-      const id = "#" + visible.target.id;
-      const active = pills.find(p => p.getAttribute("href") === id);
-      if(active) active.classList.add("active");
-    }, { rootMargin: "-35% 0px -55% 0px", threshold: [0.12, 0.2, 0.35] });
+    sections.forEach(sec => sec && observer.observe(sec));
+    setActive("education");
 
-    sections.forEach(s => obs.observe(s));
+    // Fix: smooth scroll with offset feel (sticky header)
+    pills.forEach(a => {
+      a.addEventListener("click", (e) => {
+        const href = a.getAttribute("href");
+        if(!href || !href.startsWith("#")) return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", href);
+        setActive(target.id);
+      });
+    });
 
-    // Certificates modal preview (fix broken "preview" behavior)
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modalImg");
+    // Certificate modal (fix broken previews)
+    const overlay = document.getElementById("modalOverlay");
     const modalTitle = document.getElementById("modalTitle");
-    const modalClose = document.getElementById("modalClose");
-    const modalOpenNew = document.getElementById("modalOpenNew");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeModalBtn");
 
-    function openModal(title, src){
+    const openModal = (title, imgSrc) => {
       modalTitle.textContent = title;
-      modalImg.src = src;
-      modalOpenNew.href = src;
-      modal.classList.add("show");
+      modalImg.src = imgSrc;
+      overlay.style.display = "flex";
       document.body.style.overflow = "hidden";
-    }
-    function closeModal(){
-      modal.classList.remove("show");
-      document.body.style.overflow = "";
+    };
+
+    const closeModal = () => {
+      overlay.style.display = "none";
       modalImg.src = "";
-    }
+      document.body.style.overflow = "";
+    };
 
-    document.querySelectorAll(".cert").forEach(card => {
+    document.querySelectorAll(".certCard").forEach(card => {
       card.addEventListener("click", () => {
-        const title = card.getAttribute("data-title");
-        const src = card.getAttribute("data-src");
-        openModal(title, src);
-      });
-
-      // If the thumbnail fails to load, keep the card usable
-      const img = card.querySelector("img");
-      img.addEventListener("error", () => {
-        img.style.display = "none";
-        const t = card.querySelector(".thumb");
-        t.style.background = "linear-gradient(135deg, rgba(239,68,68,.10), rgba(245,158,11,.08))";
-        t.textContent = "Image not found (check file name/path)";
-        t.style.fontWeight = "800";
-        t.style.color = "#111827";
-        t.style.fontSize = "12px";
-        t.style.padding = "12px";
-        t.style.textAlign = "center";
+        const title = card.getAttribute("data-title") || "Certificate";
+        const img = card.getAttribute("data-img") || "";
+        openModal(title, img);
       });
     });
 
-    modalClose.addEventListener("click", closeModal);
-    modal.addEventListener("click", (e) => {
-      if(e.target === modal) closeModal();
+    closeBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", (e) => {
+      if(e.target === overlay) closeModal();
     });
-    window.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", (e) => {
       if(e.key === "Escape") closeModal();
     });
-
-    // 3D tilt effect for hero (subtle + modern)
-    const hero = document.getElementById("heroCard");
-    let rect;
-    function onMove(e){
-      rect = rect || hero.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
-      const rx = (y - 0.5) * -6;
-      const ry = (x - 0.5) * 8;
-      hero.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-1px)`;
-    }
-    function reset(){
-      hero.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0px)";
-      rect = null;
-    }
-    hero.addEventListener("mousemove", onMove);
-    hero.addEventListener("mouseleave", reset);
-    hero.addEventListener("mouseenter", () => rect = hero.getBoundingClientRect());
   </script>
 </body>
 </html>
